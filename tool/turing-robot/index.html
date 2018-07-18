@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 图灵机器人</title> 
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" /> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <div class="headbar"> 
+    <span class="headbar-btns"> 
+    	<span class="headbar-btn headbar-btn-red"></span> 
+    	<span class="headbar-btn headbar-btn-yellow"></span> 
+    	<span class="headbar-btn headbar-btn-green"></span> 
+    </span> 
+   </div> 
+   <ul class="chat-thread"> 
+   </ul> 
+   <div class="msg-container"> 
+    <input type="text" class="msg" placeholder="回车发送消息..." /> 
+   </div> 
+  </div> 
+  <script src="js/jquery.js"></script> 
+  <script>
+		function sendMsg(v,callback){
+			$(".chat-thread").append('<li class="sender">'+v+'</li>')
+	       $.getJSON("http://www.tuling123.com/openapi/api?key=969d86d9ab4f4a77984d78308d360090&info="+v,function(json){
+							$(".chat-thread").append('<li class="receiver">'+json.text+'</li>');
+							setTimeout(function() {
+								$(".chat-thread").scrollTop($(".chat-thread")[0].scrollHeight);
+							}, 200);
+							if(callback){
+								callback()
+							}
+						});
+						$(".chat-thread").scrollTop($(".chat-thread")[0].scrollHeight);
+		};
+		$(function(){
+			$(".msg").keyup(function(e){
+				var v=$(".msg").val();
+				if(v){
+	                if(e.which==13){
+						$(".msg").val("")
+						sendMsg(v)
+					}
+				}
+				
+			});
+			sendMsg("你好，你是谁？");
+		});
+	</script>   
+ </body>
+</html>

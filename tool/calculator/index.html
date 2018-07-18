@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png"/>
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 计算器</title> 
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" /> 
+  <link href="css/font-awesome.min.css" rel="stylesheet" /> 
+  <link rel="stylesheet" href="css/style.css" /> 
+ </head> 
+ <body> 
+  <div class="container"> 
+  	
+   <!-- Rounded switch --> 
+   <label class="switch"> <input type="checkbox" /> <span class="slider"></span> </label> 
+   <form> 
+    <input readonly="" id="display1" type="text" class="form-control-lg text-right" /> 
+    <input readonly="" id="display2" type="text" class="form-control-lg text-right" /> 
+   </form> 
+   <div class="d-flex justify-content-between button-row"> 
+    <button id="left-parenthesis" type="button" class="operator-group">(</button> 
+    <button id="right-parenthesis" type="button" class="operator-group">)</button> 
+    <button id="square-root" type="button" class="operator-group">√</button> 
+    <button id="square" type="button" class="operator-group">x&sup2;</button> 
+   </div> 
+   <div class="d-flex justify-content-between button-row"> 
+    <button id="clear" type="button">C</button> 
+    <button id="backspace" type="button">⌫</button> 
+    <button id="ans" type="button" class="operand-group">Ans</button> 
+    <button id="divide" type="button" class="operator-group">&divide;</button> 
+   </div> 
+   <div class="d-flex justify-content-between button-row"> 
+    <button id="seven" type="button" class="operand-group">7</button> 
+    <button id="eight" type="button" class="operand-group">8</button> 
+    <button id="nine" type="button" class="operand-group">9</button> 
+    <button id="multiply" type="button" class="operator-group">&times;</button> 
+   </div> 
+   <div class="d-flex justify-content-between button-row"> 
+    <button id="four" type="button" class="operand-group">4</button> 
+    <button id="five" type="button" class="operand-group">5</button> 
+    <button id="six" type="button" class="operand-group">6</button> 
+    <button id="subtract" type="button" class="operator-group">−</button> 
+   </div> 
+   <div class="d-flex justify-content-between button-row"> 
+    <button id="one" type="button" class="operand-group">1</button> 
+    <button id="two" type="button" class="operand-group">2</button> 
+    <button id="three" type="button" class="operand-group">3</button> 
+    <button id="add" type="button" class="operator-group">+</button> 
+   </div> 
+   <div class="d-flex justify-content-between button-row"> 
+    <button id="percentage" type="button" class="operand-group">%</button> 
+    <button id="zero" type="button" class="operand-group">0</button> 
+    <button id="decimal" type="button" class="operand-group">.</button> 
+    <button id="equal" type="button">=</button> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script> 
+  <script type="text/javascript" src="js/math.min.js"></script> 
+  <script type="text/javascript" src="js/popper.min.js"></script> 
+  <script type="text/javascript" src="js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="js/main.js"></script>  
+ </body>
+</html>

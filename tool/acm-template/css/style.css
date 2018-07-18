@@ -1,0 +1,69 @@
+@font-face
+{
+	mso-font-alt:SimSun;
+	font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;
+	mso-font-charset:134;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:3 135135232 16 0 262145 0;
+}
+
+p.MsoNormal,li.MsoNormal,div.MsoNormal
+{
+	mso-pagination:widow-orphan;
+	font-size:12pt;
+	font-family:SimSun;
+	mso-bidi-font-family:SimSun;
+	margin:0 0 .0001pt;
+}
+
+p
+{
+	mso-margin-top-alt:auto;
+	margin-right:0;
+	mso-margin-bottom-alt:auto;
+	margin-left:0;
+	mso-pagination:widow-orphan;
+	font-size:12pt;
+	font-family:SimSun;
+	mso-bidi-font-family:SimSun;
+}
+
+p.title,li.title,div.title
+{
+	mso-style-name:title;
+	mso-margin-top-alt:auto;
+	margin-right:0;
+	mso-margin-bottom-alt:auto;
+	margin-left:0;
+	mso-pagination:widow-orphan;
+	font-size:14.5pt;
+	font-family:SimSun;
+	mso-bidi-font-family:SimSun;
+}
+
+@page Section1
+{
+	size:595.3pt 841.9pt;
+	mso-header-margin:42.55pt;
+	mso-footer-margin:49.6pt;
+	mso-paper-source:0;
+	margin:72pt 90pt;
+}
+
+div.Section1
+{
+	page:Section1;
+}
+
+a:link,span.MsoHyperlink,a:visited,span.MsoHyperlinkFollowed
+{
+	mso-ansi-font-size:9pt;
+	mso-bidi-font-size:9pt;
+	color:#333;
+	mso-text-animation:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;
+}

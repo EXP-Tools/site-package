@@ -1,0 +1,270 @@
+
+body {
+  padding: 0;
+  margin: 0;
+  /* background: -moz-linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%);
+  background: -webkit-linear-gradient(-45deg, #183850 0, #183850 25%, #192c46 50%, #22254c 75%, #22254c 100%); */
+  background-color: #eeeeee;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fafafa;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #c1c1c1;
+}
+
+.headbar {
+  height: 32px;
+  background-color: #E3E3E3;
+  padding: 0 12px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.headbar-btns{
+  line-height: 32px;
+}
+
+.headbar-btn {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #eee;
+  margin-right: 8px;
+}
+
+.headbar-btn-red {
+  background-color: #FF5F57;
+}
+.headbar-btn-yellow {
+  background-color: #FFBD2E;
+}
+.headbar-btn-green {
+  background-color: #28CA42;
+}
+
+
+.chat-thread {
+  margin: 5px auto 45px auto;
+  padding: 0 20px 0 0;
+  list-style: none;
+  position: absolute;
+  top:29px;
+  bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chat-thread li {
+  position: relative;
+  clear: both;
+  display: inline-block;
+  padding: 16px 40px 16px 20px;
+  margin: 0 0 20px 0;
+  font: 16px/20px 'Noto Sans', sans-serif;
+  border-radius: 10px;
+}
+
+/* Chat - Avatar */
+.chat-thread li:before {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  content: '';
+}
+
+/* Chat - Speech Bubble Arrow */
+.chat-thread li:after {
+  position: absolute;
+  top: 15px;
+  content: '';
+  width: 0;
+  height: 0;
+}
+
+.chat-thread li.sender {
+  animation: show-chat-odd 0.15s 1 ease-in;
+  -moz-animation: show-chat-odd 0.15s 1 ease-in;
+  -webkit-animation: show-chat-odd 0.15s 1 ease-in;
+  float: right;
+  margin-right: 60px;
+  color: black;
+  background-color:#b2e281;
+}
+
+.chat-thread li.sender:before {
+  right: -80px;
+  background-image: url(http://exp-blog.com/wp-content/uploads/2018/07/robot-guest.jpg);
+  background-repeat: round;
+}
+
+.chat-thread li.sender:after {
+  border-right: 15px solid transparent;
+  right: -15px;
+  border-top: 15px solid #b2e281;
+}
+
+.chat-thread li.receiver {
+  animation: show-chat-even 0.15s 1 ease-in;
+  -moz-animation: show-chat-even 0.15s 1 ease-in;
+  -webkit-animation: show-chat-even 0.15s 1 ease-in;
+  float: left;
+  margin-left: 80px;
+  color: black;
+  background-color: #ffffff;
+}
+
+.chat-thread li.receiver:before {
+  left: -80px;
+  background-image: url(http://exp-blog.com/wp-content/uploads/2018/07/robot-exp.jpg);
+  background-repeat: round;
+}
+
+.chat-thread li.receiver:after {
+  border-left: 15px solid transparent;
+  left: -15px;
+  border-top: 15px solid #ffffff;
+}
+
+.chat-window {
+  position: fixed;
+  bottom: 18px;
+}
+
+.chat-window-message {
+  width: 100%;
+  height: 48px;
+  font: 32px/48px 'Noto Sans', sans-serif;
+  background: none;
+  color: #0AD5C1;
+  border: 0;
+  border-bottom: 1px solid rgba(25, 147, 147, 0.2);
+  outline: none;
+}
+
+.msg-container{
+  margin: 0 auto;
+  clear: both;
+  height: 40px;
+}
+
+.msg{
+  display: block;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  border: 2px solid #eeeeee;
+  outline: 0;
+  -webkit-appearance: none;
+  height: 40px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font: 16px/20px 'Noto Sans', sans-serif;
+}
+
+/* Small screens */
+@media (max-width: 800px) {
+  .chat-thread {
+    width: 95%;
+  }
+
+  .msg-container{
+  width: 100%;
+   }
+.msg{
+  width: 100%;
+}
+
+  .chat-window {
+    left: 5%;
+    width: 90%;
+  }
+}
+/* Medium and large screens */
+@media  (min-width: 801px) {
+  .chat-thread {
+    width: 50%;
+    left: 25%
+  }
+
+  .msg-container{
+  width: 50%;
+   }
+
+   .msg{
+  width: 52%;
+}
+
+  .chat-window {
+    left: 25%;
+    width: 50%;
+  }
+}
+@keyframes show-chat-even {
+  0% {
+    margin-left: -480px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+@-moz-keyframes show-chat-even {
+  0% {
+    margin-left: -480px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+@-webkit-keyframes show-chat-even {
+  0% {
+    margin-left: -480px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes show-chat-odd {
+  0% {
+    margin-right: -480px;
+  }
+
+  100% {
+    margin-right: 0;
+  }
+}
+@-moz-keyframes show-chat-odd {
+  0% {
+    margin-right: -480px;
+  }
+
+  100% {
+    margin-right: 0;
+  }
+}
+@-webkit-keyframes show-chat-odd {
+  0% {
+    margin-right: -480px;
+  }
+
+  100% {
+    margin-right: 0;
+  }
+}
