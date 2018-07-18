@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn" manifest="manifest.appcache">
+ <head> 
+  <meta name="author" content="EXP: www.exp-blog.com" />
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png"/>
+  <title>EXP技术 | Flappy Bird</title> 
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" /> 
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+  <meta charset="UTF-8" /> 
+  <meta name="description" content="玩家通过恰到好处地点击鼠标，可以操控小鸟飞行且避开绿色的管道。如果小鸟碰到了障碍物，游戏就会结束。每当小鸟飞过一组管道，就会获得一分" /> 
+  <meta name="keywords" content="flappybird, Flappy Bird电脑版, Flappy Bird网页版, flappy" /> 
+ </head> 
+ <body> 
+  <h1 style="margin:10px;text-align:center;">Flappy Bird</h1> 
+  <div id="fb-root"></div> 
+  <!-- Canvas placeholder --> 
+  <div id="screen"></div> 
+  <!-- Sharing section --> 
+  <div id="share"> 
+   <div class="google"> 
+   </div> 
+  </div> 
+  <!-- melonJS Library --> 
+  <script type="text/javascript" src="lib/melonJS-1.0.0-min.js"></script> 
+  <script type="text/javascript" src="build/clumsy-min.js"></script> 
+  <!-- Bootstrap & Mobile optimization tricks --> 
+  <script type="text/javascript">
+      window.onReady(function onReady() {
+        game.onload();
+
+        // Mobile browser hacks
+        if (me.device.isMobile && !navigator.isCocoonJS) {
+          // Prevent the webview from moving on a swipe
+          window.document.addEventListener("touchmove", function (e) {
+            e.preventDefault();
+            window.scroll(0, 0);
+            return false;
+          }, false);
+
+          // Scroll away mobile GUI
+          (function () {
+            window.scrollTo(0, 1);
+            me.video.onresize(null);
+          }).defer();
+
+          me.event.subscribe(me.event.WINDOW_ONRESIZE, function (e) {
+            window.scrollTo(0, 1);
+          });
+        }
+      });
+    </script>   
+ </body>
+</html>
