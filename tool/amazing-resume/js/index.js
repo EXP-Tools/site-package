@@ -2,7 +2,7 @@ $(function() {
 	var c = new Coder("style-text");
 	c.load("<p><div class='bef_comment writecode'>/**</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*Hello，我是EXP，是一名普通的技术开发爱好者</div>");
-	c.load("<div class='bef_comment writecode'>&nbsp;*我的主要工作是无休止地学习</div>",2000);
+	c.load("<div class='bef_comment writecode'>&nbsp;*我的兴趣就是无休止地学习</div>",2000);
 	c.load("<div class='bef_comment writecode'>&nbsp;*让我们来点实际的，看看我能做些什么</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*/</div></p>");
 	c.load("<p><div class='bef_comment writecode'>/**</div>");
