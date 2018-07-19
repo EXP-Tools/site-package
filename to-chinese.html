@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <title>EXP技术 | 拼音输入法</title> 
+  <meta name="description" content="本页面需要加载1M的词库文件，所以不太适合web环境，且由于没有使用分词所以效果也不一定非常好。非要识别多音字的话，推荐在服务端完成（借助一些分词工具效果会更好，比如 https://github.com/fxsjy/jieba），然后做成接口给前端调用" /> 
+  <link rel="stylesheet" type="text/css" href="tool/pinyin-convertor/css/simple-input-method.css" /> 
+  <link rel="stylesheet" type="text/css" href="tool/pinyin-convertor/css/chinese.css" /> 
+ </head> 
+ <body> 
+  <div class="container"> 
+   <h2>拼音转汉字（JS拼音输入法，需把输入法切换为英文）</h2> 
+   <p>说明：本页面需要加载1M的词库文件</p> 
+   <div class="loading-tip">
+     正在加载词库，文件比较大，请耐心等待加载完毕再尝试。 
+   </div> 
+   <hr /> 
+   <input type="text" class="test-input-method" placeholder="请在这里输入英文试试" /> 
+   <input type="text" class="test-input-method" placeholder="请在这里输入英文试试" /> 
+   <input type="text" class="test-input-method" placeholder="请在这里输入英文试试" /> 
+  </div> 
+  <script type="text/javascript" src="tool/pinyin-convertor/dict/pinyin_dict_notone.js"></script> 
+  <script type="text/javascript" src="tool/pinyin-convertor/js/pinyinUtil.js"></script> 
+  <script type="text/javascript" src="tool/pinyin-convertor/js/simple-input-method.js"></script> 
+  <script type="text/javascript">
+  	
+		// 初始化简单的拼音输入法
+		SimpleInputMethod.init('.test-input-method');
+		document.querySelector('.loading-tip').innerHTML = 'JS加载完毕，现在你可以开始打字了！';
+	</script>   
+ </body>
+</html>
