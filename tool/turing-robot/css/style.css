@@ -24,6 +24,13 @@ body {
   background-color: #c1c1c1;
 }
 
+/*
+.msg-box {
+	height: 660px;
+	background-image: url(../img/background.png);
+}
+*/
+
 .headbar {
   height: 32px;
   background-color: #E3E3E3;
