@@ -3,7 +3,7 @@ $(function() {
 	c.load("<p><div class='bef_comment writecode'>/**</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*Hello !!! World ???</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*对不起，职业习惯 ...</div>");
-	c.load("<div class='bef_comment writecode'>&nbsp;*我是EXP，是一名兴趣使然的技术非酉</div>",2000);
+	c.load("<div class='bef_comment writecode'>&nbsp;*我是EXP，是一名兴趣使然的技术非酉</div>",1000);
 	c.load("<div class='bef_comment writecode'>&nbsp;*让我们来点实际的，看看我能做些什么</div>");
 	c.load("<div class='bef_comment writecode'>&nbsp;*/</div></p>");
 	c.load("<p><div class='bef_comment writecode'>/**</div>");
@@ -188,7 +188,7 @@ $(function() {
   w.load("<li class='writecode'>&nbsp;&nbsp;&nbsp;&nbsp;sleep();</li>");
   w.load("<li class='writecode'>}</li>");
 	w.load("</ul>");
-	w.load("<h1 class='writecode'><a href='http://exp-blog.com/2018/06/15/pid-350/' target='_blank'>自我箴言</a></h1>");
+	w.load("<h1 class='writecode'>自我箴言</h1>");
 	w.load("<ul>");
   w.load("<li class='writecode'>越努力，越幸运</li>");
   w.load("<li class='writecode'>人生就是一场修行，人必自助而天助之</li>");
