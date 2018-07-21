@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | JavaScript代码格式化</title> 
+  <meta name="keywords" content="Js代码加解密,js代码格式化,js压缩,js解压" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+ </head> 
+ <body> 
+ 	
+ 	<script src="js/code_packed.js"></script> 
+  <script src="js/eval_out.js"></script> 
+ 	<script>
+		var clipboard = new ClipboardJS('#copycode');
+		clipboard.on('success',function(e){
+		 e.clearSelection();
+		 layer.msg('复制成功！');
+		 });
+		clipboard.on('error',function(e){
+		 e.clearSelection();
+		 layer.msg('复制失败！');
+		 });
+	</script> 
+  
+  <div class="container clearfix"> 
+  	
+		<div class="panel panel-default"> 
+			<div class="panel-heading">
+			 工具简介
+			</div> 
+			<div class="panel-body"> 
+			 <p>在线格式化、美化、压缩/加密、解压/解密 Javascript脚本</p>
+			 <p class="text-success"> <i class="fa fa-warning"></i> 注：加密前请备份原 JS代码，加密后请测试JS代码能否正常使用</p> 
+			</div> 
+		</div>
+    
+		<div class="row"> 
+			<div class="col-sm-12"> 
+			 <div class="panel panel-default"> 
+			  <div class="panel-heading"> 
+			   <div class="form-inline"> 
+			    <div class="row"> 
+			     <div class="col-xs-6"> 
+			      <div style="min-height:34px;"> 
+			       <div class="form-group"> 
+			        <div id="info" name="info">
+			         <p class="text-success">工具准备就绪</p>
+			        </div> 
+			        <span>加密层数： <span style="color: red" id="deg">0</span>层</span> 
+			        <span>处理时间： <span style="color: blue" id="tme">0</span>毫秒</span> 
+			        <p class="text-danger" id="errmsg"></p> 
+			       </div> 
+			      </div> 
+			     </div> 
+			     <div class="col-xs-6 text-right"> 
+			      <p> <select id="compresstype" name="compresstype" class="form-control"> <option value="0" selected="">普通压缩</option> <option value="1">加密压缩</option> </select> <select id="tabsize" name="tabsize" class="form-control"> <option value="1">制表符缩进</option> <option value="2">2个空格缩进</option> <option value="4" selected="">4个空格缩进</option> <option value="8">8个空格缩进</option> </select> </p> 
+			      <p> <button class="btn btn-default" id="copycode" type="button" data-clipboard-target="#content"><i class="fa fa-copy"></i> 复制内容</button> <button class="btn btn-warning" id="encode" type="button" title="加密/编码/压缩/Encode/Compress"><i class="fa fa-sign-in"></i> 压缩/加密</button> <button class="btn btn-success" id="decode" type="button" title="解密/解码/格式化/decode/format"><i class="fa fa-sign-out"></i> 解压/解密</button> </p> 
+			     </div> 
+			    </div> 
+			   </div> 
+			  </div> 
+			  <div class="panel-body" style="height:400px;"> 
+			   <textarea style="width:100%;height:100%;" id="content" placeholder="请输入待处理的 js 代码" 
+			   	onfocus="this.select()" rows="15" name="content">/*   美化：格式化代码，使之容易阅读			*/
+/*   净化：去掉代码中多余的注释、换行、空格等	*/
+/*   压缩：将代码压缩为更小体积，便于传输		*/
+/*   解压：将压缩后的代码转换为方便阅读的格式	*/
+
+/*   只需要复制js代码即可，无需<script>标签	*/
+/*   以下是演示代码	*/
+
+	$.ajax({
+            type: "GET",
+            url: "url.php",
+            dataType: "json",
+			cache: false,
+            success: function (data) {
+                alert(data);
+            }
+        });</textarea> 
+			  </div> 
+			 </div> 
+			</div> 
+		</div> 
+
+  </div> 
+ </body>
+</html>
