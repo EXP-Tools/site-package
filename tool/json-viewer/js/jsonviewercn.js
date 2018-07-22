@@ -324,8 +324,7 @@ Ext.onReady(function () {
 			'->',
 			{text: 'EXP技术', handler: function(){
         window.location.href="http://www.exp-blog.com/";
-			}},
-			{text: '关于', handler: aboutWindow}
+			}}
 		],
 		items: edit
 	};
