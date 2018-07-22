@@ -1,10 +1,3 @@
-/**
-* @act      关于界面js
-* @version  1.0
-* @author   youngxj
-* @date     2018-05-05
-* @url      http://www.youngxj.cn
-*/
 
 $(function () {
   /*$("#name").focus();获取焦点*/

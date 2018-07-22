@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 文本比较器</title> 
+  <meta name="keywords" content="在线文本对比,代码对比" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/base.css" /> 
+ </head> 
+ <body> 
+  <script type="text/javascript" src="js/codemirror.js"></script> 
+  <link type="text/css" rel="stylesheet" href="css/codemirror.css" /> 
+  <script type="text/javascript" src="js/mergely.js"></script> 
+  <link type="text/css" rel="stylesheet" href="css/mergely.css" /> 
+  
+	<div style="padding:10px;">
+		<div class="panel panel-default""> 
+			<div class="panel-heading">
+			 在线文本比较器
+			</div> 
+			<div class="panel-body"> 
+			 <p>参考UE的文本比较器，可实时高亮标记两个文本之间的差异</p> 
+			</div> 
+		</div>
+	
+		<div id="mergely-resizer"> 
+			<div id="compare"></div> 
+		</div> 
+	 
+		<div> 
+			<script type="text/javascript">
+				function getWinHeight() {
+					var winHeight = 0;
+					if (window.innerHeight)
+						winHeight = window.innerHeight;
+					else if ((document.body) && (document.body.clientHeight))
+						winHeight = document.body.clientHeight;
+					return winHeight;
+				}
+				function getWinWidth() {
+					var winWidth = 0;
+					if (window.innerWidth)
+						winWidth = window.innerWidth;
+					else if ((document.body) && (document.body.clientWidth))
+						winWidth = document.body.clientWidth;
+					return winWidth;
+				}
+				$(document).ready(function () {
+					$('#compare').mergely({
+						width: 'auto',
+						height: '400',
+						cmsettings: {
+							readOnly: false, 
+							lineWrapping: true,
+						},
+						lhs: function(setValue) {
+							setValue('/*	[text area - A] welcome ! http://exp-blog.com	*/');
+						},
+						rhs: function(setValue) {
+							setValue('/*	[text area - B] welcome ! EXP | http://exp-blog.com	*/');
+						}
+					});
+					$(window).resize(function() {
+						$('#compare').mergely('options', {height:getWinHeight() - 30, width:getWinWidth() - 30});
+						$('#compare').mergely('update')
+					});
+					$(window).resize();
+				});
+				
+			</script>  
+		</div>
+  </div>
+  
+ </body>
+</html>

@@ -1,0 +1,129 @@
+a:hover,.top-menu a:hover,.show-more span,.cat-box .icon-cat,.single-content a,.single-content a:visited,#site-nav .down-menu > .current-menu-item > a,.entry-meta a,#site-nav .down-menu > .current-menu-item > a:hover,#site-nav .down-menu > li > a:hover,#site-nav .down-menu > li.sfHover > a, .cat-title .fa-bars,.widget-title .fa-bars,.at, .at a,#user-profile a:hover,#comments .fa-exclamation-circle, #comments .fa-check-square, #comments .fa-spinner, #comments .fa-pencil-square-o {
+    color: #1e73be;
+}
+
+.sf-arrows > li > .sf-with-ul:focus:after,.sf-arrows > li:hover > .sf-with-ul:after,.sf-arrows > .sfHover > .sf-with-ul:after {
+    border-top-color: #1e73be;
+}
+
+.thumbnail .cat,.format-cat,.format-img-cat {
+    background: #1e73be;
+    opacity: 0.8;
+}
+
+#login h1 a,.format-aside .post-format a,#searchform button,.li-icon-1,.li-icon-2,.li-icon-3,.new-icon, .title-l,.buttons a, .li-number, .post-format {
+    background: #1e73be;
+}
+
+.entry-more a, .qqonline a, #login input[type='submit'], .log-zd {
+    background: #1e73be;
+}
+
+.entry-more a {
+    right: -1px;
+}
+
+.entry-more a:hover {
+    color: #fff;
+    background: #595959;
+}
+
+.entry-direct a:hover {
+    border: 1px solid #1e73be;
+}
+
+#down a,.page-links span,.reply a:hover,.widget_categories a:hover,.widget_links a:hover,#respond #submit:hover,.callbacks_tabs .callbacks_here a,#gallery .callbacks_here a,#fontsize:hover,.single-meta li a:hover,.meta-nav:hover,.nav-single i:hover, .widget_categories a:hover, .widget_links a:hover, .tagcloud a:hover, #sidebar .widget_nav_menu a:hover, .gr-cat-title a, .group-tab-hd .group-current, .img-tab-hd .img-current {
+    background: #1e73be;
+    border: 1px solid #1e73be;
+}
+
+.comment-tool a, .link-all a:hover, .link-f a:hover, .ias-trigger-next a:hover, .type-cat a:hover {
+    background: #1e73be;
+    border: 1px solid #1e73be;
+}
+
+.login-t, .login-t a, .login-b, #site-nav .down-menu > .current-menu-item > a, #site-nav .down-menu > .current-menu-item > a:hover {
+    background: #1e73be;
+}
+
+.entry-header h1 {
+    border-left: 5px solid #1e73be;
+    border-right: 5px solid #1e73be;
+}
+
+.slider-caption, .grid,icon-zan, .grid-cat, .entry-title-img {
+    background: #1e73be;
+    opacity: 0.9;
+}
+
+@media screen and (min-width: 900px) {
+    #scroll li a:hover, .nav-search {
+        background: #1e73be;
+        border: 1px solid #1e73be;
+    }
+
+    .custom-more a, .cat-more a,.author-m a {
+        background: #1e73be;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #navigation-toggle:hover,.nav-search:hover,.mobile-login a:hover,.nav-mobile:hover, {
+        color: #1e73be;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .pagination span.current, .pagination a:hover {
+        background: #1e73be;
+        border: 1px solid #1e73be;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pagination .prev,.pagination .next {
+        background: #1e73be;
+    }
+}
+
+.single-content h3, .single-content .directory {
+    border-left: 5px solid #1e73be;
+}
+
+.page-links  a:hover span {
+    background: #a3a3a3;
+    border: 1px solid #a3a3a3;
+}
+
+.single-content a:hover {
+    color: #555;
+}
+
+.format-aside .post-format a:hover,.cat-more a:hover,.custom-more a:hover {
+    color: #fff;
+    }</style><style>#content, .top-nav, #top-menu, #mobile-nav, #main-search, #search-main, .breadcrumb, .footer-widget {
+        width: 1150px;
+    }
+
+    @media screen and (max-width: 1150px) {
+        #content, #colophon, .breadcrumb, .footer-widget {
+            width: 98%;
+        }
+
+        #top-menu {
+            width: 98%;
+        }
+
+        .top-nav {
+            width: 98%;
+        }
+
+        #main-search, #search-main, #mobile-nav {
+            width: 98%;
+        }
+
+        .breadcrumb {
+            width: 98%;
+        }
+    }
+    

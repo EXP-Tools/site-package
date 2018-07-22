@@ -1,10 +1,3 @@
-/**
- * @act      main
- * @version  1.0
- * @author   youngxj
- * @date     2018-03-27
- * @url      http://www.youngxj.cn
- */
 
 //复制
 function oCopy(obj){
