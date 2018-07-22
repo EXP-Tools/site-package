@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 线条字生成器</title> 
+  <meta name="keywords" content="线条字生成器" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/base.css" /> 
+ </head> 
+ <body> 
+  <script src="js/line.js"></script> 
+  <div class="container clearfix"> 
+   <div class="panel panel-default"> 
+    <div class="panel-heading">
+     工具简介
+    </div> 
+    <div class="panel-body"> 
+     <p>此工具可以生成由字符组成的 线条字。</p> 
+     <p>目前只支持字母和数字的转换，另外，可以使用 <b>换行符\n</b> 对输入的内容进行一次换行操作。</p> 
+     <p>利用此工具在 <b>源代码</b> 或 <b>控制台打印</b> 里加上线条字，会显得很cool。</p> 
+     <p>如果遇到生成错乱，请设置文本框字体为宋体（或其他等宽字体）。</p> 
+    </div> 
+   </div> 
+   <div class="panel panel-default"> 
+    <div class="panel-heading">
+     线条字生成器
+    </div> 
+    <div class="panel-body"> 
+     <form name="ascii"> 
+      <div class="form-group"> 
+       <label class="sr-only" for="exampleInputAmount">英文字母</label> 
+       <div class="input-group"> 
+        <div class="input-group-addon">
+         文本
+        </div> 
+        <input type="text" class="form-control" id="exampleInputAmount" placeholder="EXP BLOG COM" value="EXP BLOG COM" name="inputField" /> 
+       </div> 
+       <div>
+        字体风格: 
+        <select name="textStyle" class="form-control"> <option>Futuristik</option> <option selected="">Block</option> </select> 
+       </div> 
+      </div> 
+      <div class="form-group"> 
+       <input onclick="beginGenerator()" type="button" value="生成线条字" name="button" class="btn btn-success" /> 
+       <input id="copy" data-clipboard-target="#count" type="button" value="复制" class="btn btn-info" /> 
+      </div> 
+      <span id="windowMarker"> <textarea name="outputField" wrap="off" style="height:200px; font-family:'宋体';" class="form-control" id="count"> </textarea> </span> 
+     </form> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>

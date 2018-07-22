@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 汉字转拼音（支持语音）</title> 
+  <meta name="keywords" content="在线中文转拼音转语音" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/base.css" /> 
+ </head> 
+ <body> 
+  <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+  <div class="container clearfix"> 
+   <div class="panel panel-default"> 
+    <div class="panel-heading">
+      工具简介 
+    </div> 
+    <div class="panel-body"> 
+     <p>可以识别多音汉字转拼音的工具。 
+     <br />此版本为优化版，无需加载1M词库，同时由 <a href="https://tts.baidu.com/text2audio">百度语音</a> 提供朗读API支持。</p> 
+    </div> 
+   </div> 
+   <div class="row"> 
+    <div class="col-sm-6"> 
+     <div class="panel panel-default"> 
+      <div class="panel-heading"> 
+       <form class="form-inline"> 
+        <div class="row"> 
+         <div class="col-xs-12"> 
+          <div style="min-height:34px;"> 
+           <span>输出类型：</span> 
+           <label><input type="radio" name="pinyin_type" value="0" checked="" />带声调拼音</label> 
+           <label><input type="radio" name="pinyin_type" value="1" />不带声调拼音</label> 
+           <label><input type="radio" name="pinyin_type" value="2" />拼音首字母</label> 
+           <label><input type="checkbox" name="polyphone" title="支持多音字仅仅是将所有可能的组合列举出来，要做到准确识别多音字还需非常完善的词库" />简单支持多音字</label> 
+          </div> 
+         </div> 
+        </div> 
+       </form> 
+      </div> 
+      <div class="panel-body" style="height:400px;"> 
+       <textarea class="form-control textareaCode" id="textareaCode_zw" name="textareaCode"></textarea> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="col-sm-6"> 
+     <div class="panel panel-default"> 
+      <div class="panel-heading"> 
+       <button type="button" class="btn btn-info" id="copy" data-clipboard-target="#textareaCode_py">复制内容</button> 
+       <button type="button" class="btn btn-success" id="read">朗读</button> 
+      </div> 
+      <div class="panel-body" style="height:400px;"> 
+       <textarea class="form-control textareaCode" id="textareaCode_py"></textarea> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <audio id="voice" src=""></audio> 
+  <script type="text/javascript" src="js/pinyin_dict_withtone.js"></script> 
+  <script type="text/javascript" src="js/pinyinUtil.js"></script> 
+  <script type="text/javascript" src="js/py.js"></script>  
+ </body>
+</html>

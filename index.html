@@ -61,12 +61,28 @@
        <td>就是一个简单的计算器， 唯一的特色可能就是支持白天模式和夜间模式</td> 
       </tr>
       <tr> 
-       <td>汉字转拼音（<a href="tool/pinyin-convertor/to-pinyin.html" target="_blank">Convert Chinese to Pinyin</a>）</td> 
-       <td>可把多音字转换成拼音，但需要加载1M的词库文件，所以不太适合web环境，且由于没有使用分词所以效果也不一定非常好。非要识别多音字的话，推荐在服务端完成（借助一些分词工具效果会更好），然后做成接口给前端调用</td> 
+       <td>重量单位换算（<a href="tool/weight-scaler/index.html" target="_blank">Weight Scaler</a>）</td> 
+       <td>可实现在线换算 吨(Tonne)、公斤(Kilogram)、克(Gram)、毫克(Milligram)、市斤、担、两、钱、磅(Pound)、盎司(Ounce)、英钱(PennyWeight)、格令(Grain)、长吨(British long ton)、短吨(US short ton)、英担(British long hundredweight)、美担(US short hundredweight)、英石(Stone)、打兰(Dram)</td> 
+      </tr>
+      <tr> 
+       <td>长度单位换算（<a href="tool/length-scaler/index.html" target="_blank">Length Scaler</a>）</td> 
+       <td>可实现在线换算 公里(km)、米(m)、分米(dm)、厘米(cm)、里、丈、尺、寸、分、厘、海里(nmi)、英寻、英里、弗隆(fur)、码(yd)、英尺(ft)、英寸(in)、毫米(mm)、微米(um)</td> 
+      </tr>
+      <tr> 
+       <td>中国家庭称谓计算器（<a href="tool/relationship/index.html" target="_blank">Relationship</a>）</td> 
+       <td>由于工作生活节奏不同，如今很多关系稍疏远的亲戚之间来往并不多，往往会搞不清楚哪位亲戚应该喊什么称呼，很是尴尬。<br/>此工具只需简单地输入你和亲戚之间的关系，即可算出你与对方之间的相互称谓</td> 
       </tr>
       <tr> 
        <td>JS拼音输入法（<a href="tool/pinyin-convertor/to-chinese.html" target="_blank">JS Pinyin Input</a>）</td> 
        <td>通过JS实现的页面拼音输入法，需要加载1M的词库文件</td> 
+      </tr>
+      <tr> 
+       <td>汉字转拼音（<a href="tool/pinyin-convertor/to-pinyin.html" target="_blank">Convert Chinese to Pinyin</a>）</td> 
+       <td>可把多音字转换成拼音，但需要加载1M的词库文件，所以不太适合web环境，且由于没有使用分词所以效果也不一定非常好。非要识别多音字的话，推荐在服务端完成（借助一些分词工具效果会更好），然后做成接口给前端调用</td> 
+      </tr>
+      <tr> 
+       <td>汉字转拼音/语音（<a href="tool/ch-to-pinyin/to-pinyin.html" target="_blank">Convert Chinese to Pinyin - New</a>）</td> 
+       <td>此版本为优化版，无需加载1M词库，同时由 <a href="https://tts.baidu.com/text2audio">百度语音</a> 提供朗读API支持</td> 
       </tr>
       <tr> 
        <td>JSON可视化编辑器（<a href="tool/json-viewer/index.html" target="_blank">Online JSON Viewer</a>）</td> 
@@ -93,10 +109,6 @@
        <td>查询域名是否已经被注册，以及注册域名的详细信息（包括域名所有人、域名注册商、域名注册日期和过期日期等）</td> 
       </tr>
       <tr> 
-       <td>重量单位换算（<a href="tool/weight-scaler/index.html" target="_blank">Weight Scaler</a>）</td> 
-       <td>可实现在线吨(Tonne)、公斤(Kilogram)、克(Gram)、毫克(Milligram)、市斤、担、两、钱、磅(Pound)、盎司(Ounce)、英钱(PennyWeight)、格令(Grain)、长吨(British long ton)、短吨(US short ton)、英担(British long hundredweight)、美担(US short hundredweight)、英石(Stone)、打兰(Dram)间的相互换算</td> 
-      </tr>
-      <tr> 
        <td>易语言代码解析器（<a href="tool/e-analyser/index.html" target="_blank">E Analyser</a>）</td> 
        <td>易语言代码在线解析、语法高亮</td> 
       </tr>
@@ -109,8 +121,16 @@
        <td>北京时间与时间戳之间的相互转换</td> 
       </tr>
       <tr> 
-       <td>中国家庭称谓计算器（<a href="tool/relationship/index.html" target="_blank">Relationship</a>）</td> 
-       <td>由于工作生活节奏不同，如今很多关系稍疏远的亲戚之间来往并不多，往往会搞不清楚哪位亲戚应该喊什么称呼，很是尴尬。<br/>此工具只需简单地输入你和亲戚之间的关系，即可算出你与对方之间的相互称谓</td> 
+       <td>摩斯电码转换器（<a href="tool/morse/index.html" target="_blank">Morse</a>）</td> 
+       <td>支持中文字符的摩斯密码转换器，并提供电报机播报音支持</td> 
+      </tr>
+      <tr> 
+       <td>线条字生成器（<a href="tool/line-text/index.html" target="_blank">Line Text</a>）</td> 
+       <td>此工具可以生成由字符组成的线条字。目前只支持字母和数字的转换，另外，可以使用 <b>换行符\n</b> 对输入的内容进行一次换行操作。利用此工具在 <b>源代码</b> 或 <b>控制台打印</b> 里加上线条字，会显得很cool</td> 
+      </tr>
+      <tr> 
+       <td>在线正则表达式测试（<a href="tool/regex/index.html" target="_blank">Regex Tester</a>）</td> 
+       <td>支持正则表达式的在匹配/替换，并提供常用正则表达式的模板</td> 
       </tr>
      </tbody> 
     </table> 

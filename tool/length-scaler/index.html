@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 长度单位换算</title> 
+  <meta name="keywords" content="在线长度计量单位转换工具" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/base.css" /> 
+ </head> 
+ <body> 
+  <script type="text/javascript" src="js/length.js"></script> 
+  <style>
+		tr td{padding: 0px 5px 0px 5px;}
+	</style> 
+	
+  <div class="container clearfix"> 
+   <div class="panel panel-default"> 
+    <div class="panel-heading"> 
+     <h3 class="panel-title">工具简介</h3> 
+    </div> 
+    <div class="panel-body"> 
+     <p>长度计量单位换算：</p> 
+     <p>可实现在线换算 公里(km)、米(m)、分米(dm)、厘米(cm)、里、丈、尺、寸、分、厘、海里(nmi)、英寻、英里、弗隆(fur)、码(yd)、英尺(ft)、英寸(in)、毫米(mm)、微米(um)</p> 
+    </div> 
+   </div> 
+   <div class="panel panel-default"> 
+    <div class="panel-heading"> 
+     <h3 class="panel-title">长度计量单位换算</h3> 
+    </div> 
+    <div class="panel-body"> 
+     <div class="col-md-6 col-md-offset-3"> 
+      <form action=""> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">公里(km)</label> 
+        <div class="col-sm-5"> 
+         <input name="mKilometer" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mKilometer.value)) compute(this.form,mKilometer.name,length_data)" type="button" value="换算" class="btn btn-default" name="mKilometer_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">米(m)</label> 
+        <div class="col-sm-5"> 
+         <input name="mMeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mMeter.value)) compute(this.form,mMeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mMeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">分米(dm)</label> 
+        <div class="col-sm-5"> 
+         <input name="mDecimeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mDecimeter.value)) compute(this.form,mDecimeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mDecimeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">厘米(cm)</label> 
+        <div class="col-sm-5"> 
+         <input name="mCentimeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mCentimeter.value)) compute(this.form,mCentimeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mCentimeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">毫米(mm)</label> 
+        <div class="col-sm-5"> 
+         <input name="mMillimeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mMillimeter.value)) compute(this.form,mMillimeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mMillimeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">丝(dmm)</label> 
+        <div class="col-sm-5"> 
+         <input name="mDecimillimetre" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mDecimillimetre.value)) compute(this.form,mDecimillimetre.name,length_data)" type="button" value="换算" class="btn btn-default" name="mDecimillimetre_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">微米(um)</label> 
+        <div class="col-sm-5"> 
+         <input name="mMicronmeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mMicronmeter.value)) compute(this.form,mMicronmeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mMicronmeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">里</label> 
+        <div class="col-sm-5"> 
+         <input name="mLimeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mLimeter.value)) compute(this.form,mLimeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mLimeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">丈</label> 
+        <div class="col-sm-5"> 
+         <input name="mZhangmeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mZhangmeter.value)) compute(this.form,mZhangmeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mZhangmeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">尺</label> 
+        <div class="col-sm-5"> 
+         <input name="mChimeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mChimeter.value)) compute(this.form,mChimeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mChimeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">寸</label> 
+        <div class="col-sm-5"> 
+         <input name="mCunmeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mCunmeter.value)) compute(this.form,mCunmeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mCunmeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">分</label> 
+        <div class="col-sm-5"> 
+         <input name="mFenmeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mFenmeter.value)) compute(this.form,mFenmeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mFenmeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">厘</label> 
+        <div class="col-sm-5"> 
+         <input name="mmLimeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(mmLimeter.value)) compute(this.form,mmLimeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="mmLimeter_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">海里(nmi)</label> 
+        <div class="col-sm-5"> 
+         <input name="nautMile" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(nautMile.value)) compute(this.form,nautMile.name,length_data)" type="button" value="换算" class="btn btn-default" name="nautMile_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">英寻</label> 
+        <div class="col-sm-5"> 
+         <input name="nautFathom" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(nautFathom.value)) compute(this.form,nautFathom.name,length_data)" type="button" value="换算" class="btn btn-default" name="nautFathom_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">英里(mi)</label> 
+        <div class="col-sm-5"> 
+         <input name="engMile" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(engMile.value)) compute(this.form,engMile.name,length_data)" type="button" value="换算" class="btn btn-default" name="engMile_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">弗隆(fur)</label> 
+        <div class="col-sm-5"> 
+         <input name="engFurlong" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(engFurlong.value)) compute(this.form,engFurlong.name,length_data)" type="button" value="换算" class="btn btn-default" name="engFurlong_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">码(yd)</label> 
+        <div class="col-sm-5"> 
+         <input name="engYard" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(engYard.value)) compute(this.form,engYard.name,length_data)" type="button" value="换算" class="btn btn-default" name="engYard_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">英尺(ft)</label> 
+        <div class="col-sm-5"> 
+         <input name="engFoot" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(engFoot.value)) compute(this.form,engFoot.name,length_data)" type="button" value="换算" class="btn btn-default" name="engFoot_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">英寸(in)</label> 
+        <div class="col-sm-5"> 
+         <input name="engInch" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(engInch.value)) compute(this.form,engInch.name,length_data)" type="button" value="换算" class="btn btn-default" name="engInch_bt" /> 
+        </div> 
+       </div> 
+       <div class="form-group"> 
+        <label class="col-sm-3 control-label">纳米(nm)</label> 
+        <div class="col-sm-5"> 
+         <input name="nMicronmeter" size="15" class="form-control" /> 
+        </div> 
+        <div class="col-sm-4"> 
+         <input onclick="if (checkNum(nMicronmeter.value)) compute(this.form,nMicronmeter.name,length_data)" type="button" value="换算" class="btn btn-default" name="nMicronmeter_bt" /> 
+        </div> 
+       </div> 
+       <div align="right">
+        <input onclick="resetAll(this.form)" type="button" value="数据重置" name="res7" class="btn btn-success" />
+       </div> 
+      </form> 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>
