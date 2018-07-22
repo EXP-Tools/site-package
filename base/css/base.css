@@ -1,10 +1,10 @@
 /*正文样式*/
-body{
+body {
 	font-family: "HanHei SC","PingHei","PingFang SC","微软雅黑","Helvetica Neue","Helvetica","Arial",sans-serif;
 	font-size: 13px;
 	line-height: 1.846;
 	color: #666666;
-	background-image: url(../img/background.png)
+	background-image: url(../img/background.png);
 }
 
 /*主体头部空*/
@@ -43,3 +43,7 @@ body{
 
 .more ul{list-style:none;margin:0;padding-right:40px;}
 .more li{display:inline;padding: 0px 2px 0px 2px;}
+
+#welcome{width:200px;background:#fff;border:1px solid #eee;color:#000;font-size:14px;opacity:0.7;filter:alpha(opacity=70);padding:10px 20px;position:fixed;right:10px;bottom:25px;z-index:99999;box-shadow:rgb(136,123,123) 3px 2px 5px;opacity:1;}
+#welcome h4{color:#F00; line-height:30px; padding:0!important;margin:0!important;text-align:left;}
+.closebox{float:center;text-align:center;margin-top:10px;}

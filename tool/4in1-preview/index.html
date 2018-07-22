@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com//wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 4合1设备界面-网页预览</title> 
+  <meta name="keywords" content="网站略缩图,网站快照,略缩图四合一" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <script type="text/javascript" src="../../base/css/base.css"></script> 
+  <link href="css/ami.css?v=23022013" rel="stylesheet" /> 
+ </head> 
+ 
+ <body class="ami"> 
+  <script>
+	  if (browserRedirect()) {
+	    layer.msg('设备类型为手机,页面不能正常访问', {
+	      time: 0 //不自动关闭
+	      ,btn: ['返回一步', '确认']
+	      ,yes: function(index){
+	        layer.close(index);
+	        window.history.back(-1); 
+	      }
+	    });
+	  }
+	</script> 
+	
+	<!-- 四种显示设备 -->
+  <div class="wrapper"> 
+   <section class="display"> 
+    <div class="mobile ui-draggable"> 
+     <div class="trim"> 
+      <iframe src="http://exp-blog.com/" id="mobile"> </iframe> 
+     </div> 
+    </div> 
+    <div class="tablet ui-draggable"> 
+     <div class="trim"> 
+      <iframe src="http://exp-blog.com/" id="tablet"> </iframe> 
+     </div> 
+    </div> 
+    <div class="laptop ui-draggable"> 
+     <div class="trim"> 
+      <iframe src="http://exp-blog.com/" id="laptop"> </iframe> 
+     </div> 
+    </div> 
+    <div class="desktop ui-draggable"> 
+     <div class="trim"> 
+      <iframe src="http://exp-blog.com/" id="desktop"> </iframe> 
+     </div> 
+    </div> 
+   </section> 
+  </div> 
+  
+  <div style="position: fixed;bottom: 30px;right: 25px;font-size: 0;line-height: 0;z-index: 999;" class="emailss"> 
+   <script>
+
+      function getrec(){
+        document.getElementById('url').style.display="block";
+        document.getElementById('submit').style.display="block";
+        document.getElementById('modify').style.display="none";
+      }
+      
+      function outrec(){
+      	var url = document.getElementById("url").value;
+      	if(url.indexOf("http") != 0) {
+      		url = "http://" + url;
+      	}
+        document.getElementById('mobile').src=url;
+        document.getElementById('tablet').src=url;
+        document.getElementById('laptop').src=url;
+        document.getElementById('desktop').src=url;
+      }
+
+    </script> 
+    
+   <form id="rwdform" action="" method="get"> 
+    <input type="text" id="url" name="url" class="btn" placeholder="网址" value="http://exp-blog.com/" style="background:#ffffff;display:none;float: left; line-height:31px; border:1px solid #ddd; padding:4px 5px 3px 20px; width:195px; color:#999;border-bottom-left-radius:5px; border-top-left-radius:5px; font-family:Times New Roman,Georgia,Serif;" /> 
+    <input type="button" id="submit" value="提交" class="btn" style="width:60px; height:40px; background:rgb(197, 31, 31) !important; border:none; color:#fff; border-top-right-radius:5px; border-bottom-right-radius:5px;font-family:Times New Roman,Georgia,Serif;display:none;" onclick="outrec()" /> 
+   </form> 
+   <input type="button" id="modify" value="更改网址" class="seach_diana" style="transition:all .3s linear;text-align: center; width: 100px; height: 40px; background: rgb(197, 111, 111); border: none; color: rgb(255, 255, 255); border-radius: 5px; font-family: &quot;Times New Roman&quot;, Georgia, serif; font-size: small; display: block;" onclick="getrec()" /> 
+  </div>   
+ </body>
+</html>
