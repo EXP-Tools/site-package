@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | 猜数小游戏</title> 
+  <meta name="keywords" content="js小游戏,jsgame,智力游戏,猜数测试" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/base.css" /> 
+ </head> 
+ <body> 
+  <div class="container clearfix"> 
+   <div class="row row-xs"> 
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-3 col-md-offset-3 col-lg-offset-3"> 
+     <div class="page-header"> 
+      <h3 class="text-center h3-xs">猜数小游戏</h3> 
+     </div> 
+     <h5 class="text-right"><small></small></h5> 
+     <div class="form-group" id="input-wrap"> 
+      <label class="control-label control-msg" for="inputContent"></label> 
+      <div class="input">
+        猜测数字（范围 1-100）：
+       <input type="number" class="form-control" id="sz" />
+       <br /> 猜测次数：
+       <input type="text" class="form-control" id="test" readonly="readonly" />
+       <br /> 答案数字：
+       <input type="text" class="form-control" id="jg" readonly="readonly" />
+       <br />
+       <br /> 
+       <input type="button" class="btn btn-primary col-xs-6" value="我猜" id="tj" onclick="fun();" /> 
+       <input type="button" class="btn btn-primary col-xs-6" value="重置" id="cz" onclick="cx();" /> 
+      </div>
+      <!-- /input-group --> 
+     </div>
+     <!-- /.col-lg-6 --> 
+     <div class="form-controlss text-center"> 
+      <div id="content"></div> 
+      <div id="msg"></div> 
+     </div> 
+    </div> 
+   </div> 
+  </div> 
+  <script type="text/javascript" src="js/num.js"></script>  
+ </body>
+</html>
