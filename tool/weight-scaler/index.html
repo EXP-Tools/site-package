@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
- <head> 
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
-  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
-  <meta name="author" content="EXP: www.exp-blog.com" /> 
-  <title>EXP技术 | 重量单位换算</title> 
-  <meta name="keywords" content="在线重量计量单位转换工具" /> 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>重量计量单位转换-YoungxjTools</title>
+  <meta name="keywords" content="在线重量计量单位转换工具" />
   <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
   <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
   <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
@@ -15,148 +13,152 @@
   <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
   <script type="text/javascript" src="../../base/js/main.js"></script> 
   <link rel="stylesheet" type="text/css" href="../../base/css/base.css" /> 
- </head> 
- <body> 
+</head>
+<body>
   <script type="text/javascript" src="js/weight.js"></script> 
-  <style>
+	<style>
 		@media screen and (min-width: 500px) {
 			tr td{padding: 10px 5px 10px 5px;}
 		}
-	</style> 
+	</style>
 	
-  <div class="container clearfix"> 
-   <div class="panel panel-default"> 
-    <div class="panel-heading"> 
-     <h3 class="panel-title">工具简介</h3> 
-    </div> 
-    <div class="panel-body"> 
-     <p>重量计量单位换算：</p>
-     <p>可实现在线换算 吨(Tonne)、公斤(Kilogram)、克(Gram)、毫克(Milligram)、市斤、担、两、钱、磅(Pound)、盎司(Ounce)、英钱(PennyWeight)、格令(Grain)、长吨(British long ton)、短吨(US short ton)、英担(British long hundredweight)、美担(US short hundredweight)、英石(Stone)、打兰(Dram)</p> 
-    </div> 
-   </div> 
-   
-   <div class="panel panel-default"> 
-    <div class="panel-heading"> 
-     <h3 class="panel-title">重量计量单位换算</h3> 
-    </div> 
-    <div class="panel-body"> 
-     <div class="col-md-6 col-md-offset-3"> 
-      <table> 
-       <tbody> 
-        <form action=""></form> 
-        <tr> 
-         <td align="center" colspan="6"><b>公制</b>
-          <hr style="border-style: dotted;" color="#cccccc" size="1" /></td> 
-        </tr> 
-        <tr> 
-         <td>吨</td> 
-         <td><input name="mTon" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(mTon.value)) compute(this.form,mTon.name,weight_data)" type="button" value="换算" class="btn btn-default" name="mTon_bt" /></td> 
-         <td>公斤<font style="font-size=9px;">(kg)</font></td> 
-         <td><input name="mKilogram" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(mKilogram.value)) compute(this.form,mKilogram.name,weight_data)" type="button" value="换算" class="btn btn-default" name="mKilogram_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td>克<font style="font-size=9px;">(g)</font></td> 
-         <td><input name="mGram" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(mGram.value)) compute(this.form,mGram.name,weight_data)" type="button" value="换算" class="btn btn-default" name="mGram_bt" /></td> 
-         <td>毫克<font style="font-size=9px;">(mg)</font></td> 
-         <td><input name="mMilligram" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(mMilligram.value)) compute(this.form,mMilligram.name,weight_data)" type="button" value="换算" class="btn btn-default" name="mMilligram_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td align="center" colspan="6"><b>市制</b>
-          <hr style="border-style: dotted;" color="#cccccc" size="1" /></td> 
-        </tr> 
-        <tr> 
-         <td>市斤</td> 
-         <td><input name="cJin" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(cJin.value)) compute(this.form,cJin.name,weight_data)" type="button" value="换算" class="btn btn-default" name="cJin_bt" /></td> 
-         <td>担</td> 
-         <td><input name="cDan" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(cDan.value)) compute(this.form,cDan.name,weight_data)" type="button" value="换算" class="btn btn-default" name="cDan_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td>两</td> 
-         <td><input name="cLiang" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(cLiang.value)) compute(this.form,cLiang.name,weight_data)" type="button" value="换算" class="btn btn-default" name="cLiang_bt" /></td> 
-         <td>钱</td> 
-         <td><input name="cQian" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(cQian.value)) compute(this.form,cQian.name,weight_data)" type="button" value="换算" class="btn btn-default" name="cQian_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td align="center" colspan="6"><b>金衡制</b>
-          <hr style="border-style: dotted;" color="#cccccc" size="1" /></td> 
-        </tr> 
-        <tr> 
-         <td>金衡磅<font style="font-size=9px;">(lb&nbsp;t)</font></td> 
-         <td><input name="troyPound" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(troyPound.value)) compute(this.form,troyPound.name,weight_data)" type="button" value="换算" class="btn btn-default" name="troyPound_bt" /></td> 
-         <td>金衡盎司<font style="font-size=9px;">(oz&nbsp;t)</font></td> 
-         <td><input name="troyOunce" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(troyOunce.value)) compute(this.form,troyOunce.name,weight_data)" type="button" value="换算" class="btn btn-default" name="troyOunce_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td>英钱<font style="font-size=9px;">(dwt)</font></td> 
-         <td><input name="troyDWT" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(troyDWT.value)) compute(this.form,troyDWT.name,weight_data)" type="button" value="换算" class="btn btn-default" name="troyDWT_bt" /></td> 
-         <td>金衡格令</td> 
-         <td><input name="troyGrain" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(troyGrain.value)) compute(this.form,troyGrain.name,weight_data)" type="button" value="换算" class="btn btn-default" name="troyGrain_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td align="center" colspan="6"><b>常衡制</b>
-          <hr style="border-style: dotted;" color="#cccccc" size="1" /></td> 
-        </tr> 
-        <tr> 
-         <td>(英制)长吨</td> 
-         <td><input name="briTon" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(briTon.value)) compute(this.form,briTon.name,weight_data)" type="button" value="换算" class="btn btn-default" name="briTon_bt" /></td> 
-         <td>(美制)短吨</td> 
-         <td><input name="usTon" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(usTon.value)) compute(this.form,usTon.name,weight_data)" type="button" value="换算" class="btn btn-default" name="usTon_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td>英担<font style="font-size=9px;">(cwt)</font></td> 
-         <td><input name="briCWT" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(briCWT.value)) compute(this.form,briCWT.name,weight_data)" type="button" value="换算" class="btn btn-default" name="briCWT_bt" /></td> 
-         <td>美担<font style="font-size=9px;">(cwt)</font></td> 
-         <td><input name="usCWT" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(usCWT.value)) compute(this.form,usCWT.name,weight_data)" type="button" value="换算" class="btn btn-default" name="usCWT_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td>英石</td> 
-         <td><input name="briStone" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(briStone.value)) compute(this.form,briStone.name,weight_data)" type="button" value="换算" class="btn btn-default" name="briStone_bt" /></td> 
-         <td>磅<font style="font-size=9px;">(lb)</font></td> 
-         <td><input name="avdpPound" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(avdpPound.value)) compute(this.form,avdpPound.name,weight_data)" type="button" value="换算" class="btn btn-default" name="avdpPound_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td>盎司<font style="font-size=9px;">(oz)</font></td> 
-         <td><input name="avdpOunce" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(avdpOunce.value)) compute(this.form,avdpOunce.name,weight_data)" type="button" value="换算" class="btn btn-default" name="avdpOunce_bt" /></td> 
-         <td>打兰<font style="font-size=9px;">(dr)</font></td> 
-         <td><input name="avdpDram" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(avdpDram.value)) compute(this.form,avdpDram.name,weight_data)" type="button" value="换算" class="btn btn-default" name="avdpDram_bt" /></td> 
-        </tr> 
-        <tr> 
-         <td>格令</td> 
-         <td><input name="avdpGrain" size="12" class="form-control" /></td> 
-         <td><input onclick="if (checkNum(avdpGrain.value)) compute(this.form,avdpGrain.name,weight_data)" type="button" value="换算" class="btn btn-default" name="avdpGrain_bt" /></td> 
-         <td colspan="3" align="right">
-          <div>
-           <input onclick="resetAll(this.form)" type="button" value="数据重置" name="res7" class="btn btn-success" />
-          </div></td> 
-        </tr> 
-        <tr height="10">
-         <td colspan="6"></td>
-        </tr>  
-       </tbody> 
-      </table> 
-     </div> 
-    </div> 
-   </div> 
-  </div>  
+	<div class="container clearfix">
+			
+		<div class="panel panel-default"> 
+		<div class="panel-heading"> 
+		 <h3 class="panel-title">工具简介</h3> 
+		</div> 
+		<div class="panel-body"> 
+		 <p>重量计量单位换算：</p>
+		 <p>可实现在线换算 吨(Tonne)、公斤(Kilogram)、克(Gram)、毫克(Milligram)、市斤、担、两、钱、磅(Pound)、盎司(Ounce)、英钱(PennyWeight)、格令(Grain)、长吨(British long ton)、短吨(US short ton)、英担(British long hundredweight)、美担(US short hundredweight)、英石(Stone)、打兰(Dram)</p> 
+		</div> 
+		</div> 
+		
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">重量计量单位转换<small class="text-capitalize">-Weight</small></h3>
+			</div>
+			<div class="panel-body">
+				<div class="col-md-6 col-md-offset-3">
+					<table>
+						<tbody>
+							<form action="">
+								<tr>
+									<td align=center colspan=6><b>公制</b><hr style="border-style: dotted;" color=#cccccc size=1 /></td>
+								</tr>
+								<tr>
+									<td>吨</td>
+									<td ><input name=mTon size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(mTon.value)) compute(this.form,mTon.name,weight_data)" type=button value="换算" class="btn btn-default" name=mTon_bt></td>
+									
+									<td>公斤<font style="font-size=9px;">(kg)</font></td>
+									<td ><input name=mKilogram size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(mKilogram.value)) compute(this.form,mKilogram.name,weight_data)" type=button value="换算" class="btn btn-default" name=mKilogram_bt></td>
+								</tr>
+								<tr> 
+									<td>克<font style="font-size=9px;">(g)</font></td>
+									<td ><input name=mGram size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(mGram.value)) compute(this.form,mGram.name,weight_data)" type=button value="换算" class="btn btn-default" name=mGram_bt></td>
+									
+									<td>毫克<font style="font-size=9px;">(mg)</font></td>
+									<td ><input name=mMilligram size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(mMilligram.value)) compute(this.form,mMilligram.name,weight_data)" type=button value="换算" class="btn btn-default" name=mMilligram_bt></td>
+								</tr>
+								<tr>
+									<td align=center colspan=6><b>市制</b><hr style="border-style: dotted;" color=#cccccc size=1 /></td>
+								</tr>
+								<tr> 
+									<td>市斤</td>
+									<td ><input name=cJin size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(cJin.value)) compute(this.form,cJin.name,weight_data)" type=button value="换算" class="btn btn-default" name=cJin_bt></td>
+									
+									<td>担</td>
+									<td ><input name=cDan size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(cDan.value)) compute(this.form,cDan.name,weight_data)" type=button value="换算" class="btn btn-default" name=cDan_bt></td>
+								</tr>
+								<tr> 
+									<td>两</td>
+									<td ><input name=cLiang size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(cLiang.value)) compute(this.form,cLiang.name,weight_data)" type=button value="换算" class="btn btn-default" name=cLiang_bt></td>
+									
+									<td>钱</td>
+									<td ><input name=cQian size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(cQian.value)) compute(this.form,cQian.name,weight_data)" type=button value="换算" class="btn btn-default" name=cQian_bt></td>
+								</tr>
+								<tr>
+									<td align=center colspan=6><b>金衡制</b><hr style="border-style: dotted;" color=#cccccc size=1 /></td>
+								</tr>
+								<tr> 
+									<td>金衡磅<font style="font-size=9px;">(lb&nbsp;t)</font></td>
+									<td ><input name=troyPound size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(troyPound.value)) compute(this.form,troyPound.name,weight_data)" type=button value="换算" class="btn btn-default" name=troyPound_bt></td>
+									
+									<td>金衡盎司<font style="font-size=9px;">(oz&nbsp;t)</font></td>
+									<td ><input name=troyOunce size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(troyOunce.value)) compute(this.form,troyOunce.name,weight_data)" type=button value="换算" class="btn btn-default" name=troyOunce_bt></td>
+								</tr>
+								<tr> 
+									<td>英钱<font style="font-size=9px;">(dwt)</font></td>
+									<td ><input name=troyDWT size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(troyDWT.value)) compute(this.form,troyDWT.name,weight_data)" type=button value="换算" class="btn btn-default" name=troyDWT_bt></td>
+									
+									<td>金衡格令</td>
+									<td ><input name=troyGrain size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(troyGrain.value)) compute(this.form,troyGrain.name,weight_data)" type=button value="换算" class="btn btn-default" name=troyGrain_bt></td>
+								</tr>
+								<tr>
+									<td align=center colspan=6><b>常衡制</b><hr style="border-style: dotted;" color=#cccccc size=1 /></td>
+								</tr>
+								<tr> 
+									<td>(英制)长吨</td>
+									<td ><input name=briTon size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(briTon.value)) compute(this.form,briTon.name,weight_data)" type=button value="换算" class="btn btn-default" name=briTon_bt></td>
+									
+									<td>(美制)短吨</td>
+									<td ><input name=usTon size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(usTon.value)) compute(this.form,usTon.name,weight_data)" type=button value="换算" class="btn btn-default" name=usTon_bt></td>
+								</tr>
+								<tr> 
+									<td>英担<font style="font-size=9px;">(cwt)</font></td>
+									<td ><input name=briCWT size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(briCWT.value)) compute(this.form,briCWT.name,weight_data)" type=button value="换算" class="btn btn-default" name=briCWT_bt></td>
+									
+									<td>美担<font style="font-size=9px;">(cwt)</font></td>
+									<td ><input name=usCWT size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(usCWT.value)) compute(this.form,usCWT.name,weight_data)" type=button value="换算" class="btn btn-default" name=usCWT_bt></td>
+								</tr>
+								<tr> 
+									<td>英石</td>
+									<td ><input name=briStone size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(briStone.value)) compute(this.form,briStone.name,weight_data)" type=button value="换算" class="btn btn-default" name=briStone_bt></td>
+									
+									<td>磅<font style="font-size=9px;">(lb)</font></td>
+									<td ><input name=avdpPound size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(avdpPound.value)) compute(this.form,avdpPound.name,weight_data)" type=button value="换算" class="btn btn-default" name=avdpPound_bt></td>
+								</tr>
+								<tr> 
+									<td>盎司<font style="font-size=9px;">(oz)</font></td>
+									<td ><input name=avdpOunce size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(avdpOunce.value)) compute(this.form,avdpOunce.name,weight_data)" type=button value="换算" class="btn btn-default" name=avdpOunce_bt></td>
+									
+									<td>打兰<font style="font-size=9px;">(dr)</font></td>
+									<td ><input name=avdpDram size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(avdpDram.value)) compute(this.form,avdpDram.name,weight_data)" type=button value="换算" class="btn btn-default" name=avdpDram_bt></td>
+								</tr>
+								<tr> 
+									<td>格令</td>
+									<td ><input name=avdpGrain size="12" class="form-control"></td>
+									<td ><input onClick="if (checkNum(avdpGrain.value)) compute(this.form,avdpGrain.name,weight_data)" type=button value="换算" class="btn btn-default" name=avdpGrain_bt></td>
+									<td colspan=3 align=right><div><input onClick=resetAll(this.form) type=button value="数据重置" name=res7 class="btn btn-success"></div></td>
+								</tr>
+								<tr height=10><td colspan=6></td></tr>
+							</form>
+						</tbody> 
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</div>
  </body>
 </html>
