@@ -1,0 +1,6 @@
+textarea{width:100%;height: 420px;font: 12px/1.6em 'Lucida Console', 'monospace', 'Consolas';letter-spacing: 1px}
+textarea::-webkit-scrollbar{width:10px;height:10px;}
+textarea::-webkit-scrollbar-button:vertical:increment{background-color:transparent;}
+textarea::-webkit-scrollbar-track:enabled{background-color:rgba(113,112,107,0.1);-webkit-border-radius:5px;}
+textarea::-webkit-scrollbar-thumb:vertical{height:50px;background-color:rgba(0,0,0,.2);-webkit-border-radius:5px;}
+textarea::-webkit-scrollbar-thumb:horizontal{width:50px;background-color:rgba(0,0,0,.2);-webkit-border-radius:5px;}

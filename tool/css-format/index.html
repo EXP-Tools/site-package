@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head> 
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" /> 
+  <link rel="shortcut icon" href="http://exp-blog.com/wp-content/uploads/2018/07/favicon.png" /> 
+  <meta name="author" content="EXP: www.exp-blog.com" /> 
+  <title>EXP技术 | CSS格式化</title> 
+  <meta name="keywords" content="CSS代码格式化,CSS压缩,CSS净化,CSS美化" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/font-awesome.css" /> 
+  <script type="text/javascript" src="../../base/js/jquery.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/clipboard.min.js"></script> 
+  <script type="text/javascript" src="../../base/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="../../base/css/layer/layer.js"></script> 
+  <script type="text/javascript" src="../../base/js/main.js"></script> 
+  <link rel="stylesheet" type="text/css" href="../../base/css/base.css" /> 
+  <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+  <style>
+</style> 
+ </head> 
+ <body> 
+  <div class="container clearfix"> 
+   <div class="panel panel-default"> 
+    <div class="panel-heading">
+      工具简介 
+    </div> 
+    <div class="panel-body"> 
+     <p>在线格式化、美化、压缩 CSS脚本</p> 
+     <p class="text-success"> 
+     	<i class="fa fa-warning"></i> 注：加密前请备份原 JS代码，加密后请测试JS代码能否正常使用
+     </p> 
+    </div> 
+   </div> 
+   <div class="panel panel-default"> 
+    <div class="panel-heading">
+      CSS格式化 
+    </div> 
+    <div class="panel-body"> 
+     <textarea id="code" spellcheck="false">
+	/*   美化：格式化代码，使之容易阅读           */
+	/*   净化：将代码单行化，并去除注释           */
+	/*   压缩：将代码最小化，加快加载速度         */
+	/*   以下是演示代码                           */
+
+	/*reset begin*/
+body, h1, h2, h3, h4, h5, h6, hr, p,dl, dt, dd, ul, ol, li,form, fieldset, legend, button,th, td,img{border:medium none;margin: 0;padding: 0;}
+body,button{font:12px/1.5 Helvetica,\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,Arial;}
+input, label, img, th {vertical-align: middle;}
+body{background:#F1F2F6;}
+img{border:0}
+ol,li{list-style:none;}
+a{text-decoration: none;}
+a:active{background: none}
+a{outline: none;}
+     </textarea> 
+     <br /> 
+     <button class="btn btn-success" id="encode"> <i class="fa fa-sign-in"></i> 压缩 </button> 
+     <button class="btn btn-warning" id="decode"> <i class="fa fa-sign-in"></i> 美化 </button> 
+     <button class="btn btn-danger" id="purify"> <i class="fa fa-sign-in"></i> 净化 </button> 
+     <button class="btn btn-group" id="empty"> <i class="fa fa-sign-in"></i> 清空 </button> 
+    </div> 
+   </div> 
+   <script type="text/javascript" src="js/format.js"></script>  
+  </div>
+ </body>
+</html>
