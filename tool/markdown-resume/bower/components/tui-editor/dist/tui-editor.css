@@ -695,8 +695,8 @@
 
 .tui-popup-color .te-apply-button {
     height: 21px;
-    width: 35px;
-    background: #fff;
+    width: 50px;
+    background: #999;
     border: 1px solid #efefef;
     position: absolute;
     bottom: 141px;
@@ -705,7 +705,7 @@
 
 .tui-popup-color .tui-colorpicker-container .tui-colorpicker-palette-hex {
     border: 1px solid #E1E1E1;
-    padding: 3px 14px;
+    padding: 1px 1px;
     margin-left: -1px;
 }
 

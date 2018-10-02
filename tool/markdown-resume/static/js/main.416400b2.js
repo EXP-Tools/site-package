@@ -6401,12 +6401,9 @@ function(e, t, r) {
                 d.a.createElement("div", {
                     className: "Coffee"
                 },
-                d.a.createElement("h2", null, "\u4f7f\u7528\u8bf4\u660e"), d.a.createElement("p", null, "\u6b22\u8fce\u4f7f\u7528\u51b7\u718a Markdown \u7b80\u5386\u5de5\u5177\uff0c\u60a8\u7684\u7b80\u5386\u5c06\u88ab\u81ea\u52a8\u4fdd\u5b58\u4e14\u4ec5\u4f1a\u4fdd\u5b58\u5728\u60a8\u7684\u6d4f\u89c8\u5668\u91cc\uff0c\u6362\u7535\u8111\u540e\u5c06\u4e0d\u53ef\u89c1\uff0c\u6240\u4ee5\u5199\u5b8c\u540e\u8bf7\u8bb0\u5f97\u70b9\u300c\u4e0b\u8f7d\u300d\u4fdd\u5b58\u300cMD\u6587\u4ef6\u300d\u5230\u7535\u8111\uff1b\u66f4\u591a\u529f\u80fd\uff0c\u8bf7\u770b", d.a.createElement("a", {
-                    href: "https://weibo.com/tv/v/Fw6fNfSkA",
-                    target: "_blank",
-                    rel: "noopener noreferrer"
-                },
-                "\u6559\u5b66\u89c6\u9891"), "\u3002"), d.a.createElement("p", {
+                d.a.createElement("h2", null, "\u4f7f\u7528\u8bf4\u660e"), 
+                d.a.createElement("p", null, "\u6b22\u8fce\u4f7f\u7528\u0020\u004d\u0061\u0072\u006b\u0064\u006f\u0077\u006e\u0020\u7b80\u5386\u5728\u7ebf\u7f16\u8f91\u5de5\u5177\uff0c\u60a8\u7684\u7b80\u5386\u5c06\u88ab\u81ea\u52a8\u4fdd\u5b58\u4e14\u4ec5\u4f1a\u4fdd\u5b58\u5728\u60a8\u7684\u6d4f\u89c8\u5668\u91cc\uff0c\u6362\u7535\u8111\u540e\u5c06\u4e0d\u53ef\u89c1\uff0c\u6240\u4ee5\u5199\u5b8c\u540e\u8bf7\u8bb0\u5f97\u70b9\u300c\u4e0b\u8f7d\u300d\u4fdd\u5b58\u300c\u004d\u0044\u6587\u4ef6\u300d\u5230\u7535\u8111\u3002"), 
+                d.a.createElement("p", {
                     className: "CoffeeClose"
                 },
                 d.a.createElement("a", {
@@ -6415,28 +6412,7 @@ function(e, t, r) {
                         return e.closeGuide(t)
                     }
                 },
-                "\u5173\u95ed")), d.a.createElement("div", {
-                    className: "IconDetail"
-                },
-                "Logo icon made by ", d.a.createElement("a", {
-                    href: "http://www.freepik.com",
-                    title: "Freepik",
-                    target: "_blank",
-                    rel: "noopener noreferrer"
-                },
-                "Freepik"), " from ", d.a.createElement("a", {
-                    href: "https://www.flaticon.com/",
-                    title: "Flaticon",
-                    target: "_blank",
-                    rel: "noopener noreferrer"
-                },
-                "www.flaticon.com"), " is licensed by ", d.a.createElement("a", {
-                    href: "http://creativecommons.org/licenses/by/3.0/",
-                    title: "Creative Commons BY 3.0",
-                    target: "_blank",
-                    rel: "noopener noreferrer"
-                },
-                "CC 3.0 BY")))))
+                "\u5173\u95ed")))))
             }
         }]),
         t
