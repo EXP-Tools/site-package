@@ -1,0 +1,211 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif
+}
+
+html {
+	overflow: hidden
+}
+
+.Container {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	background-color: #ff0;
+	min-height: 100vh
+}
+
+.Container a {
+	text-decoration: none;
+	color: #999
+}
+
+.SideBar {
+	background-color: #363636;
+	max-width: 100px;
+	min-width: 100px;
+	padding: 0
+}
+
+.LogoBox,.SideBar {
+	-ms-flex: 1 1;
+	flex: 1 1;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-align: center;
+	align-items: center
+}
+
+.LogoBox {
+	opacity: .4;
+	max-height: 100px;
+	margin-bottom: 20px
+}
+
+.Logo {
+	max-width: 40px;
+	margin-top: 30px;
+	margin-bottom: 10px
+}
+
+.LogoText {
+	color: #fff;
+	font-size: 14px
+}
+
+.SideMenu {
+	margin: 0;
+	padding: 0;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex: 5 1;
+	flex: 5 1;
+	-ms-flex-pack: start;
+	justify-content: flex-start
+}
+
+.SideMenu,.SideMenu a {
+	color: #999;
+	font-size: 14px
+}
+
+.SideMenu a {
+	text-decoration: none
+}
+
+.SideMenu>div a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+	min-width: 100vw
+}
+
+.SideMenu>div.Active a {
+	color: #fff;
+	background-color: #2f2f2f
+}
+
+.SideMenu>div:hover a {
+	background-color: #d84146;
+	color: #fff
+}
+
+.SectionBar {
+	background-color: #f2f2f2;
+	-ms-flex: 2 1;
+	flex: 2 1;
+	max-width: 200px;
+	min-width: 200px;
+	border-right: 1px solid #ccc
+}
+
+.SectionBar .Editor {
+	border-bottom: 1px solid #ccc;
+	min-height: 60px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-size: 18px
+}
+
+.SectionBar .Editor.Active {
+	background-color: #fff;
+	border-left: 5px solid #d84146;
+	border-bottom: 0
+}
+
+.SectionBar .Spacer {
+	height: 30px;
+	background-color: #000;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-size: 14px;
+	color: #fff
+}
+
+.GuideList {
+	padding: 0;
+	margin: 0
+}
+
+.GuideList>li {
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-ms-flex-align: center;
+	align-items: center;
+	min-height: 40px;
+	border-bottom: 1px solid #e2e2e2;
+	padding-left: 20px
+}
+
+.GuideList>li:hover {
+	background-color: #d84146
+}
+
+.GuideList>li:hover a,.GuideList>li:hover svg {
+	color: #fff
+}
+
+.GuideList>li svg {
+	width: 20px;
+	height: 20px;
+	color: #aaa;
+	padding: 5px;
+	padding-top: 2px
+}
+
+.WorkingBox {
+	background-color: #f2f2f2;
+	-ms-flex: 4 1;
+	flex: 4 1;
+	display: -ms-flexbox;
+	display: flex
+}
+
+.WorkingBox #MdEditor {
+	-ms-flex: 1 1;
+	flex: 1 1
+}
+
+.WorkingBox a {
+	color: #ec7175
+}
+
+.Coffee {
+	background-color: #fff;
+	line-height: 150%
+}
+
+.Coffee a {
+	color: #d84146;
+	text-decoration: none
+}
+
+.CoffeeClose {
+	text-align: right
+}
+
+.CoffeeClose a {
+	color: #999
+}
+
+.IconDetail,.IconDetail a {
+	color: #ccc
+}
+/*# sourceMappingURL=main.8ad86c34.css.map*/

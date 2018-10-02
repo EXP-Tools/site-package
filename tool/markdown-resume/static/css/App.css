@@ -1,0 +1,276 @@
+
+
+html
+{
+  overflow: hidden;
+}
+
+.Container
+{
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row ;
+      flex-direction: row ;
+  -ms-flex-align: stretch ;
+      align-items: stretch ; 
+  background-color:yellow;
+  min-height: 100vh;
+}
+
+.Container a
+{
+  text-decoration: none;
+  color:#999;
+}
+
+
+.SideBar
+{
+  background-color: rgb(54, 54, 54);
+  -ms-flex:1 1;
+      flex:1 1;
+  max-width: 100px;
+  min-width: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  padding:0px;
+}
+
+.LogoBox
+{
+  opacity: 0.4;
+  -ms-flex:1 1;
+      flex:1 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  max-height: 100px;
+  margin-bottom: 20px;
+}
+
+.Logo
+{
+  max-width: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.LogoText
+{
+  color:white;
+  font-size: 14px;
+}
+
+.SideMenu
+{
+  margin: 0px;
+  padding:0px;
+  color:#999;
+  font-size: 14px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex:5 1;
+      flex:5 1;
+  /* background-color: red; */
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+.SideMenu a
+{
+  text-decoration: none;
+  color:#999;
+  font-size: 14px;
+}
+
+/* .SideMenu > div
+{
+  display: flex;
+  flex:1;
+  align-items: center;
+} */
+
+
+
+.SideMenu > div a
+{
+  display: block;
+  padding: 20px;
+  text-align: center;
+  /* background-color: #eee; */
+  min-width: 100vw;
+}
+
+.SideMenu > div.Active a
+{
+  color:white;
+  background-color: #2f2f2f;
+}
+
+.SideMenu > div:hover a
+{
+  background-color: #d84146;
+  color:white;
+}
+
+
+.SectionBar
+{
+  background-color: #f2f2f2;
+  -ms-flex:2 1;
+      flex:2 1;
+  max-width: 200px;
+  min-width: 200px;
+  border-right: 1px solid #ccc;
+
+}
+
+.SectionBar .Editor
+{
+  /* border-bottom: 1px solid #cccccc; */
+  border-bottom: 1px solid #ccc;
+  min-height: 60px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 18px;
+}
+
+.SectionBar .Editor.Active
+{
+  background-color: white;
+  border-left: 5px solid #d84146;
+  border-bottom:0px;
+}
+
+.SectionBar .Spacer
+{
+  height:30px;
+  background-color: #000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  font-size: 14px;
+  color:white;
+}
+
+.GuideList
+{
+  padding:0px;
+  margin: 0px;
+}
+
+/* .GuideList >li > a
+{
+  text-align: center;
+  background-color: red;
+  min-width: 100vw;
+} */
+
+.GuideList > li
+{
+  display: -ms-flexbox;
+  display: flex;
+  width:100%;
+  /* background-color: green; */
+  -ms-flex-align: center;
+      align-items: center;
+  /* justify-content: center; */
+  min-height: 40px;
+  border-bottom: 1px solid #e2e2e2;
+  padding-left:20px;
+}
+
+.GuideList > li:hover
+{
+  background-color: #d84146;
+}
+
+.GuideList > li:hover a,.GuideList > li:hover svg
+{
+  color:white;
+}
+
+.GuideList >li svg
+{
+  width: 20px;
+  height: 20px;
+  color:#aaa;
+  /* border: 1px solid red; */
+  padding: 5px;
+  padding-top:2px;
+}
+
+.WorkingBox
+{
+  background-color: #f2f2f2;
+  -ms-flex:4 1;
+      flex:4 1;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.WorkingBox #MdEditor
+{
+  -ms-flex:1 1;
+      flex:1 1;
+}
+
+.WorkingBox a
+{
+  color: #ec7175;
+}
+
+.Coffee
+{
+  background-color: white;
+  line-height: 150%;
+}
+
+.Coffee a
+{
+  color:#d84146;
+  text-decoration: none;
+}
+
+.CoffeeClose
+{
+  text-align: right;
+}
+
+.CoffeeClose a
+{
+  color:#999;
+}
+
+.IconDetail,.IconDetail a
+{
+  color:#ccc;
+}
+
+
+
+
+
+
+
+
+
+
+// WEBPACK FOOTER //
+// ./src/App.css
