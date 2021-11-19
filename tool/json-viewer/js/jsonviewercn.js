@@ -322,7 +322,7 @@ Ext.onReady(function () {
 				jsonviewer.removeZhuanyi();
 			}},
 			'->',
-			{text: 'EXP技术', handler: function(){
+			{text: '眈眈探求', handler: function(){
         window.location.href="http://www.exp-blog.com/";
 			}}
 		],
