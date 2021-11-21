@@ -9,6 +9,9 @@
         <meta name="keywords" content="OCR文字识别工具,图片文字识别" />
         <meta name="description" content="在线OCR文字识别工具，从图片中识别出文字，辨识率非常高" />
         <link rel="stylesheet" type="text/css" href="../../base/css/base2.css" />
+        <script src="./js/ocr.js">
+            var ocr = new BaiduOCR();
+        </script>
     </head>
     <body>
         <div class="content">
@@ -20,9 +23,70 @@
                 </div>
                 <form name="wawa" class="tool-form">
                     <div id="file-select" class="drop-upload">
-                        <p>拖放一张图片到这里，或者
-                            <a id="pickfile" href="javascript:;">选择图片</a>
-                        </p>
+                        <!-- <p>拖放一张图片到这里，或者
+                            <a id="pickfile" href="javascript: fileByBase64();">选择图片</a>
+                        </p> -->
+                        <div>
+                        <!--accept只能与file配合使用。它可以限制上传的文件类型
+                            当然你也可以写成 accept="image/*"-->
+                            <input type="file" id="myimg"
+                                    onchange="imgChange(this)"
+                                    accept="image/png,image/jpeg"/>
+                        </div>
+                        <img src="0" />
+                        <script>
+                            function imgChange(img) {
+                                console.log(img.files)
+                                // 生成一个文件读取的对象
+                                const reader = new FileReader();
+                                reader.onload = function (ev) {
+                                    // base64码
+                                    var imgFile = ev.target.result;//或e.target都是一样的
+                                    document.querySelector("img").src= ev.target.result;
+
+
+                                    var tokenHttp = new XMLHttpRequest();
+                                    var url = `https://aip.baidubce.com/oauth/2.0/token?
+                                    grant_type=client_credentials&
+                                    client_id=1wAxyEHuGNi6AlBmEU85G7ye&
+                                    client_secret=hMH5XmM1ahmUqgQr6zO7ixIl13bHq6CD&`;
+                                    tokenHttp.open("post", url);	
+                                    tokenHttp.setRequestHeader('content-type','application/x-www-form-urlencoded');
+                                    tokenHttp.setRequestHeader('Access-Control-Allow-Origin','*');
+                                    tokenHttp.setRequestHeader('Referer', 'https://lyy289065406.github.io/site-package/tool/ocr/index.html')
+                                    tokenHttp.setRequestHeader('Host','lyy289065406.github.io');
+                                    tokenHttp.setRequestHeader('Origin','https://foo.example');
+                                    tokenHttp.send()
+                                    console.log(33);
+                                    tokenHttp.onload = function (e) {
+                                        console.log(22);
+                                        data = e.target.response;
+                                        console.log(data);
+                                        
+                                        var jd = JSON.parse(data);
+                                        var token = jd.access_token;
+                                        var http = new XMLHttpRequest();						
+                                        var url = "https://aip.baidubce.com/rest/2.0/ocr/v1/accurate_basic?access_token=" + this.token;
+                                        var img = "image="+imgFile;		
+                                        http.open("post", url);	
+                                        http.setRequestHeader('content-type','application/x-www-form-urlencoded');			
+                                        http.send(img);
+                                        http.onload = function (e) {
+                                            console.log(11);
+                                            console.log(e.target.response);
+                                        };
+                                    };
+                                    console.log(44);
+
+                                }
+                                //发起异步读取文件请求，读取结果为data:url的字符串形式，
+                                reader.readAsDataURL(img.files[0]);
+                                console.log(55);
+
+
+
+                            }
+                        </script>
                     </div>
                     <div id="tool-tips">
                     </div>
@@ -60,9 +124,8 @@
             var WWW_UID = 0;
         </script>
         <script src="../../base/js/public.min.js?v=241d7a662e"></script>
-        <script src="./js/plupload.full.min.js"></script>
-        <script src="./js/ocr.min.js?v=b8c4ae57cd">
-        </script>
+        <!-- <script src="./js/plupload.full.min.js"></script>
+        <script src="./js/ocr.min.js?v=b8c4ae57cd"> -->
     </body>
 
 </html>
