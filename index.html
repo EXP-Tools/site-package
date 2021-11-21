@@ -21,17 +21,83 @@
     <table id="tool" class="dataintable"> 
      <tbody> 
       <tr> 
-       <th width="30%">工具类</th> 
+       <th width="30%">爬虫类</th> 
        <th width="70%">&nbsp;</th> 
       </tr>
       <tr> 
         <td>威胁情报播报（<a href="https://lyy289065406.github.io/threat-broadcast/" target="_blank">Threat-Broadcast</a>）</td> 
         <td>从公开的威胁情报来源爬取并整合最新 CVE 信息，支持订阅</td> 
-       </tr>
-       <tr> 
+      </tr>
+      <tr> 
         <td>Steam 特惠折扣榜单（<a href="https://lyy289065406.github.io/steam-discount/" target="_blank">steam-discount</a>）</td> 
         <td>从 Steam 商城爬取游戏的【打折（史低）】、【零元购】、【测评】、【热度】情况的榜单整理并展示，半小时刷新一次</td> 
+      </tr>
+     </tbody>
+    </table>
+
+
+    <table id="tool" class="dataintable"> 
+     <tbody> 
+      <tr> 
+       <th width="30%">工具类</th> 
+       <th width="70%">&nbsp;</th> 
+      </tr>
+      <tr>
+       <td>JSON可视化编辑器（<a href="tool/json-viewer/index.html" target="_blank">Online JSON Viewer</a>）</td> 
+       <td>在线格式化、压缩、转义 JSON脚本</td> 
+      </tr>
+      <tr> 
+       <td>JSON格式化（<a href="tool/json-format/index.html" target="_blank">JSON Format</a>）</td> 
+       <td>在线格式化、压缩JSON脚本，支持把JSON转换为XML脚本</td> 
+      </tr>
+      <tr> 
+       <td>JavaScript格式化（<a href="tool/js-format/index.html" target="_blank">JS Format</a>）</td> 
+       <td>在线格式化、美化、压缩/加密、解压/解密 Javascript脚本</td> 
+      </tr>
+      <tr> 
+       <td>CSS格式化（<a href="tool/css-format/index.html" target="_blank">CSS Format</a>）</td> 
+       <td>在线格式化、美化、压缩CSS脚本</td> 
+      </tr>
+      <tr> 
+        <td>HTML格式化（<a href="tool/html-format/index.html" target="_blank">HTML Format</a>）</td> 
+        <td>在线格式化、美化杂乱的HTML脚本，便于查看编辑</td> 
        </tr>
+      <tr> 
+       <td>Word文本格式化（<a href="tool/word-format/index.html" target="_blank">Word Format</a>）</td> 
+       <td>在线统计Word文本字数、排版成Word格式</td> 
+      </tr>
+      <tr> 
+        <td>OCR文字识别（<a href="tool/ocr/index.html" target="_blank">OCR</a>）</td> 
+        <td>从图片中识别出文字，由 <a href="http://cv.ftqq.com/" target="_blank">百度【通用文字识别】API</a>提供技术支持（请勿调用本站接口）。</td> 
+       </tr>
+      <tr> 
+       <td>cron表达式生成器（<a href="tool/cron-expression/index.html" target="_blank">Cron Expression</a>）</td> 
+       <td>可以在线生成任务调度器（如Quartz）的Cron表达式, 实现对Cron表达式的可视化双向解析和生成</td> 
+      </tr>
+      <tr> 
+       <td>全角半角转换器（<a href="tool/full-half-width-converter/index.html" target="_blank">Full-Width to Half-Width</a>）</td> 
+       <td>在线全角半角转换工具，很方便的将全角字符和半角字符相互切换</td> 
+      </tr>
+      <tr> 
+       <td>在线文本比较器（<a href="tool/text-cmp/index.html" target="_blank">Text Comparator</a>）</td> 
+       <td>参考UE的文本比较器，可实时高亮标记两个文本之间的差异</td> 
+      </tr>
+      <tr> 
+       <td>线条字生成器（<a href="tool/line-text/index.html" target="_blank">Line Text</a>）</td> 
+       <td>此工具可以生成由字符组成的线条字。目前只支持字母和数字的转换，另外，可以使用 <b>换行符\n</b> 对输入的内容进行一次换行操作。利用此工具在 <b>源代码注释</b> 或 <b>控制台打印</b> 里加上线条字，会显得很cool</td> 
+      </tr>
+      <tr> 
+       <td>在线正则表达式测试（<a href="tool/regex/index.html" target="_blank">Regex Tester</a>）</td> 
+       <td>支持正则表达式的在线匹配/替换，并提供常用正则表达式的模板</td> 
+      </tr>
+      <tr> 
+       <td>任意进制转换（<a href="tool/bodh/index.html" target="_blank">BODH</a>）</td> 
+       <td>支持在2~36进制之间进行任意转换，支持浮点数</td> 
+      </tr>
+      <tr> 
+       <td>任意文本转HTML-UNICODE（<a href="tool/html-unicode/index.html" target="_blank">Html Unicode</a>）</td> 
+       <td>有时HTML在存储时只能使用ISO-8859-1编码，但又要显示中文、表情等非ASCII的特殊字符。 此时可以使用此工具把这类字符转码成UNICODE，浏览器在呈现时会显示为原本字符</td> 
+      </tr>
       <tr> 
        <td>炫丽JS动画简历（<a href="tool/amazing-resume/index.html" target="_blank">JS Amazing Resume</a>）</td> 
        <td>通过JavaScript绘制的创意动画简历</td> 
@@ -63,10 +129,6 @@
       <tr> 
        <td>ACM常用算法模板（<a href="tool/acm-template/index.html" target="_blank">ACM Algorithm Template</a>）</td> 
        <td>ACM小组内部预定函数，包含：数学问题、字符串处理、计算几何、数论、图论、排序/搜索、数据结构等</td> 
-      </tr>
-      <tr> 
-       <td>cron表达式生成器（<a href="tool/cron-expression/index.html" target="_blank">Cron Expression</a>）</td> 
-       <td>可以在线生成任务调度器（如Quartz）的Cron表达式, 实现对Cron表达式的可视化双向解析和生成</td> 
       </tr>
       <tr> 
        <td>4合1设备界面-网页预览（<a href="tool/4in1-preview/index.html" target="_blank">4in1 Preview</a>）</td> 
@@ -101,38 +163,6 @@
        <td>此版本为优化版，无需加载1M词库，同时由 <a href="https://tts.baidu.com/text2audio">百度语音</a> 提供朗读API支持</td> 
       </tr>
       <tr> 
-        <td>全角半角转换器（<a href="tool/full-half-width-converter/index.html" target="_blank">Full-Width to Half-Width</a>）</td> 
-        <td>在线全角半角转换工具，很方便的将全角字符和半角字符相互切换</td> 
-       </tr>
-      <tr>
-       <td>JSON可视化编辑器（<a href="tool/json-viewer/index.html" target="_blank">Online JSON Viewer</a>）</td> 
-       <td>在线格式化、压缩、转义 JSON脚本</td> 
-      </tr>
-      <tr> 
-       <td>JSON格式化（<a href="tool/json-format/index.html" target="_blank">JSON Format</a>）</td> 
-       <td>在线格式化、压缩JSON脚本，支持把JSON转换为XML脚本</td> 
-      </tr>
-      <tr> 
-       <td>JavaScript格式化（<a href="tool/js-format/index.html" target="_blank">JS Format</a>）</td> 
-       <td>在线格式化、美化、压缩/加密、解压/解密 Javascript脚本</td> 
-      </tr>
-      <tr> 
-       <td>CSS格式化（<a href="tool/css-format/index.html" target="_blank">CSS Format</a>）</td> 
-       <td>在线格式化、美化、压缩CSS脚本</td> 
-      </tr>
-      <tr> 
-        <td>HTML格式化（<a href="tool/html-format/index.html" target="_blank">HTML Format</a>）</td> 
-        <td>在线格式化、美化杂乱的HTML脚本，便于查看编辑</td> 
-       </tr>
-      <tr> 
-       <td>Word文本格式化（<a href="tool/word-format/index.html" target="_blank">Word Format</a>）</td> 
-       <td>在线统计Word文本字数、排版成Word格式</td> 
-      </tr>
-      <tr> 
-       <td>在线文本比较器（<a href="tool/text-cmp/index.html" target="_blank">Text Comparator</a>）</td> 
-       <td>参考UE的文本比较器，可实时高亮标记两个文本之间的差异</td> 
-      </tr>
-      <tr> 
         <td>JSFUCK混淆编码生成器（<a href="tool/jsfuck/index.html" target="_blank">JSFuck</a>）</td> 
         <td>此工具可以把你的Javascript代码转化成只有6个字符 []()!+ 的代码，并且完全可以正常执行。转换之后的Javascript代码非常难读，可以作为一些简单的保密措施，但是一般会增加文件大小，不建议在大部分位置采用</td> 
        </tr>
@@ -143,22 +173,6 @@
       <tr> 
        <td>摩斯电码转换器（<a href="tool/morse/index.html" target="_blank">Morse</a>）</td> 
        <td>支持中文字符的摩斯密码转换器，并提供电报机播报音支持</td> 
-      </tr>
-      <tr> 
-       <td>线条字生成器（<a href="tool/line-text/index.html" target="_blank">Line Text</a>）</td> 
-       <td>此工具可以生成由字符组成的线条字。目前只支持字母和数字的转换，另外，可以使用 <b>换行符\n</b> 对输入的内容进行一次换行操作。利用此工具在 <b>源代码注释</b> 或 <b>控制台打印</b> 里加上线条字，会显得很cool</td> 
-      </tr>
-      <tr> 
-       <td>在线正则表达式测试（<a href="tool/regex/index.html" target="_blank">Regex Tester</a>）</td> 
-       <td>支持正则表达式的在线匹配/替换，并提供常用正则表达式的模板</td> 
-      </tr>
-      <tr> 
-       <td>任意进制转换（<a href="tool/bodh/index.html" target="_blank">BODH</a>）</td> 
-       <td>支持在2~36进制之间进行任意转换，支持浮点数</td> 
-      </tr>
-      <tr> 
-       <td>任意文本转HTML-UNICODE（<a href="tool/html-unicode/index.html" target="_blank">Html Unicode</a>）</td> 
-       <td>有时HTML在存储时只能使用ISO-8859-1编码，但又要显示中文、表情等非ASCII的特殊字符。 此时可以使用此工具把这类字符转码成UNICODE，浏览器在呈现时会显示为原本字符</td> 
       </tr>
       <tr> 
        <td>易语言代码解析器（<a href="tool/e-analyser/index.html" target="_blank">E Analyser</a>）</td> 
