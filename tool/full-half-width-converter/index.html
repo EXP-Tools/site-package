@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="EXP: www.exp-blog.com" />
+        <link rel="shortcut icon" href="https://exp-blog.com/favicon.png" />
+        <title>眈眈探求 | 全角半角转换工具</title>
+        <meta name="keywords" content="全角,半角,全角半角切换" />
+        <meta name="description" content="在线全角半角转换工具，很方便的将全角字符和半角字符相互切换" />
+        <link rel="stylesheet" type="text/css" href="css/full-half.min.css" />
+    </head>
+    
+    <body>
+        <div class="content">
+            <div class="content-body">
+                <div class="tool-title clearfix">
+                    <h1 class="tool-name">
+                        全角半角转换工具
+                    </h1>
+                </div>
+                <div class="tool-form">
+                    <div class="form-field">
+                        <textarea name="str" cols="90" rows="10" class="form-textarea form-block" id="tool-res" placeholder="请把你需要转换的内容粘贴在这里"></textarea>
+                    </div>
+                    <div class="form-btn">
+                        <input class="btn btn-success" onclick="charcode_convert(0);" type="button" value="全角转换为半角">
+                        <input class="btn btn-success" onclick="charcode_convert(1);" type="button" value="半角转换为全角">
+                        <input class="btn btn-warning btn-copy" type="button" value="复制" data-clipboard-target="#tool-res">
+                        <input class="btn btn-info btn-cut" type="button" value="剪切" data-clipboard-action="cut" data-clipboard-target="#tool-res">
+                    </div>
+                    <div id="tool-tips">
+                    </div>
+                    <p class="tips">
+                        提示：如果您是需要输入法的全角半角转换，请点击输入法浮标上的圆形🌕或半月形🌙
+                    </p>
+                </div>
+                <div class="tool-info">
+                    <h5>
+                        相关知识
+                    </h5>
+                    <p>
+                        全角是一种电脑字符，且每个全角字符占用两个标准字符（或半角字符）位置。
+                    </p>
+                    <p>
+                        每个普通字符（或半角字符）只占用一字节的空间（一字节有8位，共256个编码空间），而汉语、日语、及朝鲜文等象形字语言的字库量远大于256个，所以改用两个字节来储存。同时，也是因为中日韩等象形文字的书写习惯，如果统一使用全角字符的话，排列起来也显得整齐。
+                    </p>
+                    <p>
+                        为了排列整齐，英文和其它拉丁文的字符和标点也提供了全角格式。
+                    </p>
+                    <p>
+                        汉字字符和规定了全角的英文字符及国标utf-8-80中的图形符号和特殊字符都是全角字符。一般的系统命令是不用全角字符的，只是在作文字处理时才会使用全角字符。
+                    </p>
+                    <p>
+                        通常的英文字母、数字键、符号键都是半角的，半角的显示内码都是一个字节。在系统内部，以上三种字符是作为基本代码处理的，所以用户输入命令和参数时一般都使用半角。
+                    </p>
+                    <h5>
+                        全角与半角有什么区别？
+                    </h5>
+                    <p>
+                        全角占两个字节，半角占一个字节。
+                    </p>
+                    <p>
+                        全角就是字母和数字等与汉字占等宽位置
+                    </p>
+                    <p>
+                        半角就是ASCII方式的字符，在没有汉字输入法起做用的时候输入的字母数字和字符都是半角的。
+                    </p>
+                    <p>
+                        半角全角主要是针对标点符号来说的，全角标点占两个字节，半角占一个字节，而不管是半角还是全角，汉字都还是要占两个字节
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="./js/public.min.js?v=241d7a662e"></script>
+        <script src="./js/tool/full-half.min.js?v=d32138593f"></script>
+    </body>
+
+</html>
