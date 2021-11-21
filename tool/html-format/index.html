@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="EXP: www.exp-blog.com" />
+        <link rel="shortcut icon" href="https://exp-blog.com/favicon.png" />
+        <title>眈眈探求 | HTML 格式化</title>
+        <meta name="keywords" content="HTML格式化工具,HTML代码格式化" />
+        <meta name="description" content="在线HTML代码格式化工具，输入HTML代码，即可自动格式化，美化杂乱的HTML代码，便于查看编辑" />
+        <link rel="stylesheet" type="text/css" href="../../base/css/base2.css" />
+    </head>
+	<body>
+		<div class="content">
+			<div class="content-body">
+				<div class="tool-title clearfix">
+					<h1 class="tool-name">
+						HTML格式化工具
+					</h1>
+				</div>
+				<div class="tool-form">
+					<div class="form-field">
+						<textarea rows="10" class="form-textarea form-block" id="tool-form" placeholder="请把你需要格式的HTML代码粘贴到在这里"></textarea>
+					</div>
+					<div class="form-btn">
+						<label for="tabsize">
+							缩进方式：
+						</label>
+						<select name="tabsize" id="tabsize" class="form-input">
+							<option value="1" selected="selected">Tab符缩进</option>
+							<option value="2">2个空格缩进</option>
+							<option value="4">4个空格缩进</option>
+							<option value="8">8个空格缩进</option>
+						</select>
+						<input class="btn btn-success" type="button" onclick="html_format();"
+						value="格式化" />
+						<input class="btn btn-warning btn-copy" type="button" value="复制结果" data-clipboard-target="#tool-result">
+					</div>
+					<div id="tool-tips">
+					</div>
+					<div class="form-field">
+						<textarea rows="10" class="form-textarea form-block" id="tool-result">
+						</textarea>
+					</div>
+				</div>
+				<div class="wwads-cn wwads-horizontal" data-id="102" style="max-width:100%">
+				</div>
+				<div class="tool-info">
+					<h5>
+						HTML说明
+					</h5>
+					<p>
+						HTML的英文全称是 Hyper Text Marked Language，即超文本标记语言，是一种标识性的语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的Internet资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本，HTML命令可以说明文字，图形、动画、声音、表格、链接等。
+					</p>
+				</div>
+			</div>
+		</div>
+        <script src="../../base/js/public.min.js?v=241d7a662e"></script>
+		<script src="./js/html-format.min.js?v=82ea07c4a7"></script>
+	</body>
+
+</html>

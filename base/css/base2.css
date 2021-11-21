@@ -194,7 +194,7 @@ body {
     line-height: 1.6;
     color: #333;
     font-size: 1rem;
-    background-image: url(../../../base/img/background.png);
+    background-image: url(../img/background.png);
 }
 
 a:link,a:visited {
